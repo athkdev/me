@@ -25,8 +25,6 @@ const Nav = (): ReactElement => {
 
   const handleOnDrawerOpen = () => {
     setDrawerOpen(!drawerOpen);
-
-    console.log(drawerOpen);
   };
 
   return (
@@ -58,7 +56,7 @@ const Nav = (): ReactElement => {
         </Center>
         <div className="hidden md:flex bg-secondary font-text ">
           <div className="flex mx-auto gap-2 my-auto">
-            <Link href="https://atharvakamble.github.io/resume.pdf" isExternal>
+            <Link href="/resume.pdf" isExternal>
               resume
             </Link>
             <Center height="30px">
@@ -87,76 +85,82 @@ const Nav = (): ReactElement => {
           </div>
         </div>
         <Drawer
-          placement="right"
+          placement="top"
           onClose={handleOnDrawerOpen}
           isOpen={drawerOpen}
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerHeader />
             <DrawerBody>
               <div className={`flex flex-col mx-auto`}>
-                <Stack direction={"column"}>
-                  <Button
-                    leftIcon={<FileTextIcon />}
-                    colorScheme="facebook"
-                    variant="solid"
-                    color="white"
-                    bgColor="#2b2b2b"
-                  >
-                    <Link href="/public/resume.pdf" isExternal>
-                      resume
+                <Center>
+                  <Stack direction={"column"}>
+                    <Link href="/resume.pdf" isExternal>
+                      <Button
+                        leftIcon={<FileTextIcon />}
+                        colorScheme="facebook"
+                        variant="solid"
+                        color="white"
+                        bgColor="#2b2b2b"
+                        className="w-full"
+                      >
+                        resume
+                      </Button>
                     </Link>
-                  </Button>
 
-                  <Button
-                    leftIcon={<GitHubLogoIcon />}
-                    color="white"
-                    bgColor="#2b2b2b"
-                    variant="solid"
-                  >
-                    <Link href="https://github.com/AtharvaKamble" isExternal>
-                      github
-                    </Link>
-                  </Button>
+                    <Button
+                      leftIcon={<GitHubLogoIcon />}
+                      color="white"
+                      bgColor="#2b2b2b"
+                      variant="solid"
+                      className="w-full"
+                    >
+                      <Link href="https://github.com/AtharvaKamble" isExternal>
+                        github
+                      </Link>
+                    </Button>
 
-                  <Button
-                    leftIcon={<LinkedInLogoIcon />}
-                    color="white"
-                    bgColor="#2b2b2b"
-                    variant="solid"
-                  >
-                    <Link
-                      href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
-                      isExternal
+                    <Button
+                      leftIcon={<LinkedInLogoIcon />}
+                      color="white"
+                      bgColor="#2b2b2b"
+                      variant="solid"
+                      className="w-full"
                     >
-                      linkedin
-                    </Link>
-                  </Button>
-                  <Button
-                    leftIcon={<TextAlignLeftIcon />}
-                    color="white"
-                    bgColor="#2b2b2b"
-                    variant="solid"
-                  >
-                    <Link href="/blog/" isExternal>
-                      blog
-                    </Link>
-                  </Button>
-                  <Button
-                    leftIcon={<Pencil1Icon />}
-                    color="white"
-                    bgColor="#2b2b2b"
-                    variant="solid"
-                  >
-                    <Link
-                      href="https://medium.com/@atharvadkamble00"
-                      isExternal
+                      <Link
+                        href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
+                        isExternal
+                      >
+                        linkedin
+                      </Link>
+                    </Button>
+                    <Button
+                      leftIcon={<TextAlignLeftIcon />}
+                      color="white"
+                      bgColor="#2b2b2b"
+                      variant="solid"
+                      className="w-full"
                     >
-                      medium
-                    </Link>
-                  </Button>
-                </Stack>
+                      <Link href="/blog" isExternal>
+                        blog
+                      </Link>
+                    </Button>
+                    <Button
+                      leftIcon={<Pencil1Icon />}
+                      color="white"
+                      bgColor="#2b2b2b"
+                      variant="solid"
+                      className="w-full"
+                    >
+                      <Link
+                        href="https://medium.com/@atharvadkamble00"
+                        isExternal
+                      >
+                        medium
+                      </Link>
+                    </Button>
+                  </Stack>
+                </Center>
               </div>
             </DrawerBody>
           </DrawerContent>
