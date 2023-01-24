@@ -40,8 +40,11 @@ const Nav = (): ReactElement => {
       <div className="flex md:grid grid-cols-2 gap-2 m-4">
         <Center className="mx-auto">
           <div>
-            <h1 className="font-thin text-2xl md:text-4xl">
-              My name is <span className="name">Atharva Kamble.</span>
+            <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
+              My name is{" "}
+              <span className="name underline underline-offset-2 hover:text-amber-500 cursor-pointer">
+                <Link href="/">Atharva Kamble.</Link>
+              </span>
             </h1>
             {/* <p className="font-text">
             I am a
@@ -56,19 +59,27 @@ const Nav = (): ReactElement => {
         </Center>
         <div className="hidden md:flex bg-secondary font-text ">
           <div className="flex mx-auto gap-2 my-auto">
-            <Link href="/resume.pdf" isExternal>
+            <Link
+              href="/resume.pdf"
+              isExternal
+              className="hover:-translate-y-0.5 transition ease-in-out"
+            >
               resume
             </Link>
             <Center height="30px">
               <Divider orientation="vertical" />
             </Center>
-            <Link href="https://github.com/AtharvaKamble" isExternal>
+            <Link
+              href="https://github.com/AtharvaKamble"
+              isExternal
+              className="hover:-translate-y-0.5 transition ease-in-out"
+            >
               github
             </Link>
-
             <Link
               href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
               isExternal
+              className="hover:-translate-y-0.5 transition ease-in-out"
             >
               linkedin
             </Link>
@@ -76,10 +87,18 @@ const Nav = (): ReactElement => {
             <Center height="30px">
               <Divider orientation="vertical" />
             </Center>
-            <Link href="/blog/" isExternal>
-              blog
+            <Link
+              href="/blog/"
+              isExternal
+              className="hover:-translate-y-0.5 transition ease-in-out"
+            >
+              blogs
             </Link>
-            <Link href="https://medium.com/@atharvadkamble00" isExternal>
+            <Link
+              href="https://medium.com/@atharvadkamble00"
+              isExternal
+              className="hover:-translate-y-0.5 transition ease-in-out"
+            >
               medium
             </Link>
           </div>
@@ -142,7 +161,7 @@ const Nav = (): ReactElement => {
                       className="w-full"
                     >
                       <Link href="/blog" isExternal>
-                        blog
+                        blogs
                       </Link>
                     </Button>
                     <Button
