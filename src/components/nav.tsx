@@ -88,7 +88,7 @@ const Nav = (): ReactElement => {
               <Divider orientation="vertical" />
             </Center>
             <Link
-              href="/blog/"
+              href="/blog"
               isExternal
               className="hover:-translate-y-0.5 transition ease-in-out"
             >
