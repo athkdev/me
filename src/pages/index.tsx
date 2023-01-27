@@ -10,7 +10,7 @@ export default function Home({ children }: { children: ReactElement }) {
   return (
     <div className="content-body flex justify-center sm:justify-end w-full h-screen">
       <Stack className="sm:border-l border-l-slate-100 p-2">
-        <p className="mx-auto textt-xs sm:text-sm font-extralight animate-bounce">
+        <p className="mx-auto text-xs font-extralight animate-bounce">
           Currently listening
         </p>
         (
