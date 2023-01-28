@@ -6,12 +6,11 @@ import {
   Drawer,
   DrawerBody,
   DrawerContent,
-  DrawerHeader,
   DrawerOverlay,
   Link,
   Stack,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ArrowUpIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   LinkedInLogoIcon,
   TextAlignLeftIcon,
@@ -42,7 +41,7 @@ const Nav = (): ReactElement => {
           <div>
             <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
               My name is{" "}
-              <span className="name underline underline-offset-2 hover:text-amber-500 cursor-pointer">
+              <span className="name underline underline-offset-2 hover:text-neutral-900 hover:bg-white  cursor-pointer text-white">
                 <Link href="/">Atharva Kamble.</Link>
               </span>
             </h1>
@@ -110,78 +109,79 @@ const Nav = (): ReactElement => {
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerBody>
-              <div className={`flex flex-col mx-auto`}>
-                <Center>
-                  <Stack direction={"column"}>
-                    <Link href="/resume.pdf" isExternal>
-                      <Button
-                        leftIcon={<FileTextIcon />}
-                        colorScheme="facebook"
-                        variant="solid"
-                        color="white"
-                        bgColor="#2b2b2b"
-                        className="w-full"
-                      >
-                        resume
-                      </Button>
+            <div className={`flex flex-col mx-auto mt-3`}>
+              <Center className="bg-white">
+                <Stack direction={"column"} className="bg-white">
+                  <Link href="/resume.pdf" isExternal>
+                    <Button
+                      leftIcon={<FileTextIcon />}
+                      colorScheme="facebook"
+                      variant="solid"
+                      color="white"
+                      bgColor="black"
+                      className="w-full"
+                    >
+                      resume
+                    </Button>
+                  </Link>
+
+                  <Button
+                    leftIcon={<GitHubLogoIcon />}
+                    color="white"
+                    bgColor="black"
+                    variant="solid"
+                    className="w-full"
+                  >
+                    <Link href="https://github.com/AtharvaKamble" isExternal>
+                      github
                     </Link>
+                  </Button>
 
-                    <Button
-                      leftIcon={<GitHubLogoIcon />}
-                      color="white"
-                      bgColor="#2b2b2b"
-                      variant="solid"
-                      className="w-full"
+                  <Button
+                    leftIcon={<LinkedInLogoIcon />}
+                    color="white"
+                    bgColor="black"
+                    variant="solid"
+                    className="w-full"
+                  >
+                    <Link
+                      href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
+                      isExternal
                     >
-                      <Link href="https://github.com/AtharvaKamble" isExternal>
-                        github
-                      </Link>
-                    </Button>
-
-                    <Button
-                      leftIcon={<LinkedInLogoIcon />}
-                      color="white"
-                      bgColor="#2b2b2b"
-                      variant="solid"
-                      className="w-full"
+                      linkedin
+                    </Link>
+                  </Button>
+                  <Button
+                    leftIcon={<TextAlignLeftIcon />}
+                    color="white"
+                    bgColor="black"
+                    variant="solid"
+                    className="w-full"
+                  >
+                    <Link href="/blog" isExternal>
+                      blogs
+                    </Link>
+                  </Button>
+                  <Button
+                    leftIcon={<Pencil1Icon />}
+                    color="white"
+                    bgColor="black"
+                    variant="solid"
+                    className="w-full"
+                  >
+                    <Link
+                      href="https://medium.com/@atharvadkamble00"
+                      isExternal
                     >
-                      <Link
-                        href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
-                        isExternal
-                      >
-                        linkedin
-                      </Link>
-                    </Button>
-                    <Button
-                      leftIcon={<TextAlignLeftIcon />}
-                      color="white"
-                      bgColor="#2b2b2b"
-                      variant="solid"
-                      className="w-full"
-                    >
-                      <Link href="/blog" isExternal>
-                        blogs
-                      </Link>
-                    </Button>
-                    <Button
-                      leftIcon={<Pencil1Icon />}
-                      color="white"
-                      bgColor="#2b2b2b"
-                      variant="solid"
-                      className="w-full"
-                    >
-                      <Link
-                        href="https://medium.com/@atharvadkamble00"
-                        isExternal
-                      >
-                        medium
-                      </Link>
-                    </Button>
-                  </Stack>
-                </Center>
-              </div>
-            </DrawerBody>
+                      medium
+                    </Link>
+                  </Button>
+                </Stack>
+              </Center>
+            </div>
+            <p className="relative mx-auto top-6 text-xs text-gray-300">
+              <ArrowUpIcon className="animate-bounce" />
+            </p>
           </DrawerContent>
         </Drawer>
       </div>
