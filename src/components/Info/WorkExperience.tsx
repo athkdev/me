@@ -55,7 +55,7 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
                 <Title name={title} className="mb-1" />
                 <Description>
                   <p className="text-neutral-400">{description}</p>
-                  <TechStack array={techStack} />
+                  <TechStack key={title.toLowerCase()} array={techStack} />
                 </Description>
               </JobDetails>
             </>

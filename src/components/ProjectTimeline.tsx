@@ -35,7 +35,13 @@ export default function ProjectTimeline({
       className={`${classes} grid grid-flow-row grid-cols-3 gap-4 sm:h-[calc(100vh-80px)]`}
     >
       {projects.map((project) => {
-        return <ProjectCard title={project.title} desc={project.desc} />;
+        return (
+          <ProjectCard
+            key={project.title.toLowerCase()}
+            title={project.title}
+            desc={project.desc}
+          />
+        );
       })}
     </div>
   );

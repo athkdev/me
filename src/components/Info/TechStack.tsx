@@ -1,12 +1,16 @@
 import { ReactElement } from "react";
 
 interface TechStackProps {
+  key: string;
   array: string[];
 }
 
-export default function TechStack({ array }: TechStackProps): ReactElement {
+export default function TechStack({
+  key,
+  array,
+}: TechStackProps): ReactElement {
   return (
-    <p className="mt-2 text-neutral-400">
+    <p key={key} className="mt-2 text-neutral-400">
       {array.map((element, i) => {
         return (
           <span className="text-neutral-400 text-xs">
