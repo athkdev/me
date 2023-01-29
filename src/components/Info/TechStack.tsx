@@ -13,7 +13,7 @@ export default function TechStack({
     <p key={key} className="mt-2 text-neutral-400">
       {array.map((element, i) => {
         return (
-          <span className="text-neutral-400 text-xs">
+          <span key={i} className="text-neutral-400 text-xs">
             {element} {i < array.length - 1 ? " • " : null}
           </span>
         );
