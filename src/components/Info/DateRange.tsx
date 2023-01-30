@@ -14,7 +14,7 @@ export default function DateRange({
   className,
 }: DateRangeProps): ReactElement {
   return (
-    <p className={`${className} text-neutral-400 sm:col-span-2`}>
+    <p key={start} className={`${className} text-neutral-400 sm:col-span-2`}>
       {start} - {current ? "present" : end}
     </p>
   );

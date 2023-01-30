@@ -4,7 +4,6 @@ import {
   Center,
   Divider,
   Drawer,
-  DrawerBody,
   DrawerContent,
   DrawerOverlay,
   Link,
@@ -41,7 +40,7 @@ const Nav = (): ReactElement => {
           <div>
             <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
               My name is{" "}
-              <span className="name underline underline-offset-2 hover:text-neutral-900 hover:bg-white  cursor-pointer text-white">
+              <span className="name underline underline-offset-2 hover:bg-amber-400 cursor-pointer text-white">
                 <Link href="/">Atharva Kamble.</Link>
               </span>
             </h1>
@@ -88,7 +87,6 @@ const Nav = (): ReactElement => {
             </Center>
             <Link
               href="/blog"
-              isExternal
               className="hover:-translate-y-0.5 transition ease-in-out"
             >
               blogs
@@ -158,9 +156,7 @@ const Nav = (): ReactElement => {
                     variant="solid"
                     className="w-full"
                   >
-                    <Link href="/blog" isExternal>
-                      blogs
-                    </Link>
+                    <Link href="/blog">blogs</Link>
                   </Button>
                   <Button
                     leftIcon={<Pencil1Icon />}

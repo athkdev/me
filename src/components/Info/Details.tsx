@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
 import Title from "./Title";
 
-interface JobDetailsProps {
+interface DetailsProps {
   children: ReactElement;
 }
 
-export default function JobDetails(props: any): ReactElement {
+export default function Details(props: any): ReactElement {
   return <div className="sm:col-span-4">{props.children}</div>;
 }

@@ -9,14 +9,12 @@
     font-family: 'Inter', sans-serif;
     color: white;
     background:black ;
-    -webkit-tap-highlight-color:
-    
 }
 
 *::selection {
     color: #ebebeb;
     background: darkslategray ;
-  }
+}
 
 .font-code {
     font-family: 'Anonymous Pro', monospace;

@@ -1,16 +1,18 @@
 import { ReactElement } from "react";
 
-interface TechStackProps {
+interface BulletedListProps {
   key: string;
   array: string[];
+  className?: string;
 }
 
-export default function TechStack({
+export default function BulletedList({
   key,
   array,
-}: TechStackProps): ReactElement {
+  className,
+}: BulletedListProps): ReactElement {
   return (
-    <p key={key} className="mt-2 text-neutral-400">
+    <p key={key} className={`${className} text-neutral-400`}>
       {array.map((element, i) => {
         return (
           <span key={i} className="text-neutral-400 text-xs">
