@@ -4,7 +4,6 @@ import {
   Center,
   Divider,
   Drawer,
-  DrawerBody,
   DrawerContent,
   DrawerOverlay,
   Link,
@@ -88,7 +87,6 @@ const Nav = (): ReactElement => {
             </Center>
             <Link
               href="/blog"
-              isExternal
               className="hover:-translate-y-0.5 transition ease-in-out"
             >
               blogs
@@ -158,9 +156,7 @@ const Nav = (): ReactElement => {
                     variant="solid"
                     className="w-full"
                   >
-                    <Link href="/blog" isExternal>
-                      blogs
-                    </Link>
+                    <Link href="/blog">blogs</Link>
                   </Button>
                   <Button
                     leftIcon={<Pencil1Icon />}
