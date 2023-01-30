@@ -1,7 +1,7 @@
 import DateRange from "./DateRange";
 import Description from "./Description";
-import JobDetails from "./JobDetails";
-import TechStack from "./TechStack";
+import Details from "./Details";
+import BulletedList from "./BulletedList";
 import Title from "./Title";
 
 interface WorkExperienceProps {
@@ -51,13 +51,17 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
                 end={end}
                 className="mb-1"
               />
-              <JobDetails>
+              <Details>
                 <Title name={title} className="mb-1" />
                 <Description>
                   <p className="text-neutral-400">{description}</p>
-                  <TechStack key={title.toLowerCase()} array={techStack} />
+                  <BulletedList
+                    className="mt-2"
+                    key={title.toLowerCase()}
+                    array={techStack}
+                  />
                 </Description>
-              </JobDetails>
+              </Details>
             </>
           );
         })}
