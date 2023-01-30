@@ -41,7 +41,7 @@ const Nav = (): ReactElement => {
           <div>
             <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
               My name is{" "}
-              <span className="name underline underline-offset-2 hover:text-neutral-900 hover:bg-white  cursor-pointer text-white">
+              <span className="name underline underline-offset-2 hover:bg-amber-400 cursor-pointer text-white">
                 <Link href="/">Atharva Kamble.</Link>
               </span>
             </h1>

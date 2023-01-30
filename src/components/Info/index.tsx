@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import RightLandingSidebar from "../RightLandingSidebar";
 import About from "./About";
 import Education from "./Education";
+import Projects from "./Projects";
 import WorkExperience from "./WorkExperience";
 
 interface InfoProps {
@@ -14,6 +15,7 @@ export default function Info({ className }: InfoProps): ReactElement {
       <About />
       <WorkExperience className="mt-10" />
       <Education className="mt-10" />
+      <Projects className="mt-10" />
     </div>
   );
 }
