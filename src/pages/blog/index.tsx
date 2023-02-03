@@ -1,4 +1,4 @@
-import BlogCard from "@/components/BlogCard";
+import BlogCard from "@/components/Blog/BlogCard";
 import { Center, Grid, Stack } from "@chakra-ui/react";
 
 export default function Blog() {
