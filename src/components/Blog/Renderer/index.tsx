@@ -14,7 +14,9 @@ export default function Renderer({ className }: RendererProps): ReactElement {
 
   return (
     <div className="my-4 flex flex-col gap-5 mx-auto font-text text-sm sm:text-md">
-      <ReactMarkdown rehypePlugins={[rehypeRaw]} children={transpile.init()} />
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+        {transpile.init()}
+      </ReactMarkdown>
     </div>
   );
 }
