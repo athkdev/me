@@ -16,20 +16,12 @@ const projects: Project[] = [
     url: "https://github.com/AtharvaKamble/cmto",
   },
   {
-    title: "Relations Builder",
+    title: "Relations builder",
     url: "https://github.com/AtharvaKamble/relation-builder",
   },
   {
-    title: "TLL - The Learner's Language",
+    title: "TLL - The Learners' Language",
     url: "https://github.com/AtharvaKamble/tll",
-  },
-  {
-    title: "Sideproject title 1",
-    url: "https://github.com",
-  },
-  {
-    title: "Sideproject title 2",
-    url: "https://github.com",
   },
 ];
 
