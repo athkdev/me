@@ -17,8 +17,17 @@ import {
   FileTextIcon,
   Pencil1Icon,
 } from "@radix-ui/react-icons";
+import EmailForResume from "./EmailForResume";
 
-const Nav = (): ReactElement => {
+interface NavProps {
+  resumeModalOpen: boolean;
+  setResumeModalOpen: any;
+}
+
+const Nav = ({
+  resumeModalOpen,
+  setResumeModalOpen,
+}: NavProps): ReactElement => {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
   const handleOnDrawerOpen = () => {
@@ -58,7 +67,8 @@ const Nav = (): ReactElement => {
         <div className="hidden md:flex bg-secondary font-text ">
           <div className="flex mx-auto gap-2 my-auto">
             <Link
-              href="/resume.pdf"
+              // href="/resume.pdf"
+              onClick={() => setResumeModalOpen(() => true)}
               isExternal
               className="hover:-translate-y-0.5 transition ease-in-out"
             >
@@ -105,12 +115,14 @@ const Nav = (): ReactElement => {
           onClose={handleOnDrawerOpen}
           isOpen={drawerOpen}
         >
-          <DrawerOverlay />
           <DrawerContent>
             <div className={`flex flex-col mx-auto mt-3`}>
               <Center className="bg-white">
                 <Stack direction={"column"} className="bg-white">
-                  <Link href="/resume.pdf" isExternal>
+                  <Link
+                    onClick={() => setResumeModalOpen(() => true)}
+                    isExternal
+                  >
                     <Button
                       leftIcon={<FileTextIcon />}
                       colorScheme="facebook"
