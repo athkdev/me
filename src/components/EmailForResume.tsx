@@ -22,7 +22,7 @@ export default function EmailForResume({ open, setOpen }: EmailForResumeProps) {
         <ModalCloseButton />
         <ModalBody>
           <p className="text-xs">
-            Networking's the best, I love it! So excited that you want to
+            Networking{"'"}s the best, I love it! So excited that you want to
             connect with me! Drop your mail and we can take it from there! Btw,
             no spams or anything, just personal network. {"<3"}
           </p>
