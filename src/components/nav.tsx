@@ -48,7 +48,7 @@ const Nav = ({
     const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
     const mode = 'light';
-    const _initTitleColorStyle = mode === 'dark' ? TAILWIND.color.primary : TAILWIND.color.secondary;
+    const _initTitleColorStyle = mode === 'light' ? TAILWIND.color.secondary : TAILWIND.color.primary;
     const [titleColorStyle, setTitleColorStyle] = useState<string>(_initTitleColorStyle);
 
     const handleOnDrawerOpen = () => {
