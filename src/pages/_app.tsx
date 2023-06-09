@@ -16,7 +16,7 @@ const _initStyles: CustomStyles = {
 
 export default function App({ Component, pageProps }: AppProps) {
   const [resumeModalOpen, setResumeModalOpen] = useState<boolean>(false);
-  const [darkModeToggle, setDarkModeToggle] = useState<boolean>(false); // this value will come from the cookies just like the _initStyles
+  const [darkModeToggle, setDarkModeToggle] = useState<boolean>(true); // this value will come from the cookies just like the _initStyles
 
   const [styles, setStyles] = useState<CustomStyles>(_initStyles);
 
@@ -24,8 +24,8 @@ export default function App({ Component, pageProps }: AppProps) {
     setStyles((prev: CustomStyles) => {
       const tmp = _.cloneDeep(prev);
       tmp.colorClass = darkModeToggle
-        ? TAILWIND.color.primary
-        : TAILWIND.color.secondary;
+        ? TAILWIND.color.secondary
+        : TAILWIND.color.primary;
 
       tmp.backgroundClass = darkModeToggle
         ? TAILWIND.background.primary
