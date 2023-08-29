@@ -23,15 +23,10 @@ import {
   FileTextIcon,
   Pencil1Icon,
 } from "@radix-ui/react-icons";
-<<<<<<< HEAD
-import EmailForResume from "./Contact";
-=======
 
-import EmailForResume from "./EmailForResume";
 import { CustomStyles, TAILWIND } from "@/shared";
 import _ from "lodash";
 import DarkModeToggle from "./DarkModeToggle";
->>>>>>> be0382c7000ed82425b4bc2a7b348858895c3f5f
 
 interface NavProps {
   resumeModalOpen: boolean;
