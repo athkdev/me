@@ -26,9 +26,10 @@ const jobs: Job[] = [
   {
     title: "Programmer Analyst",
     start: "July 2022",
-    end: "",
-    current: true,
-    description: "Building web e2e products!",
+    end: "July 2023",
+    current: false,
+    description:
+      "Used Java Spring and Angular along with AWS and Oracle DB to build full stack web products!",
     techStack: ["Spring Boot", "AWS", "Angular", "Docker"],
     company: "Cognizant Technology Solutions",
     companyLink: "https://www.cognizant.com/in/en",

@@ -21,6 +21,18 @@ interface Education {
 
 const education: Education[] = [
   {
+    institution: "Northeastern University",
+    start: "September 2023",
+    end: "",
+    current: true,
+    degree: "Master of Science in Information Systems",
+    gpa: "",
+    coursework: [
+      "Application Engineering and Development",
+      "Web design and UX Engineering",
+    ],
+  },
+  {
     institution: "University of Mumbai",
     start: "Aug 2018",
     end: "May 2022",
