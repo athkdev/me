@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useState, useEffect } from "react";
 import {
   Button,
   Center,
@@ -8,8 +8,14 @@ import {
   DrawerOverlay,
   Link,
   Stack,
+  Switch,
 } from "@chakra-ui/react";
-import { ArrowUpIcon, HamburgerIcon } from "@chakra-ui/icons";
+import {
+  ArrowUpIcon,
+  HamburgerIcon,
+  MoonIcon,
+  SunIcon,
+} from "@chakra-ui/icons";
 import {
   LinkedInLogoIcon,
   TextAlignLeftIcon,
@@ -17,22 +23,51 @@ import {
   FileTextIcon,
   Pencil1Icon,
 } from "@radix-ui/react-icons";
+<<<<<<< HEAD
 import EmailForResume from "./Contact";
+=======
+
+import EmailForResume from "./EmailForResume";
+import { CustomStyles, TAILWIND } from "@/shared";
+import _ from "lodash";
+import DarkModeToggle from "./DarkModeToggle";
+>>>>>>> be0382c7000ed82425b4bc2a7b348858895c3f5f
 
 interface NavProps {
   resumeModalOpen: boolean;
   setResumeModalOpen: any;
+  darkModeToggle: boolean;
+  setDarkModeToggle: any;
+  setStyles: any;
 }
 
 const Nav = ({
   resumeModalOpen,
   setResumeModalOpen,
+  darkModeToggle,
+  setDarkModeToggle,
+  setStyles,
 }: NavProps): ReactElement => {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
 
+  const mode = "dark";
+  const _initTitleColorStyle =
+    mode === "dark" ? TAILWIND.color.secondary : TAILWIND.color.primary;
+  const [titleColorStyle, setTitleColorStyle] =
+    useState<string>(_initTitleColorStyle);
+
   const handleOnDrawerOpen = () => {
-    setDrawerOpen(!drawerOpen);
+    setDrawerOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    // set cookie as well
+    setTitleColorStyle((color) => {
+      return color === TAILWIND.color.secondary
+        ? TAILWIND.color.primary
+        : TAILWIND.color.secondary;
+    });
+  }, [darkModeToggle]);
 
   return (
     <>
@@ -44,24 +79,26 @@ const Nav = ({
         />
       </div>
       <Divider className="flex md:hidden" orientation="horizontal" />
-      <div className="flex md:grid grid-cols-2 gap-2 m-4">
+      <div className="flex md:grid grid-cols-2 gap-2 p-4">
         <Center className="mx-auto">
           <div>
             <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
               My name is{" "}
-              <span className="name underline underline-offset-2 hover:bg-amber-400 cursor-pointer text-white">
+              <span
+                className={`name underline underline-offset-2 hover:bg-amber-400 cursor-pointer ${titleColorStyle}`}
+              >
                 <Link href="/">Atharva Kamble.</Link>
               </span>
             </h1>
             {/* <p className="font-text">
-            I am a
-            <span id="roles" className="button-secondary">
-              software engineer
-            </span>
-            <span id="hover-box" className="hover-box slide-right">
-              *click click*
-            </span>
-          </p> */}
+                            I am a
+                            <span id="roles" className="button-secondary">
+                            software engineer
+                            </span>
+                            <span id="hover-box" className="hover-box slide-right">
+                          *click click*
+                          </span>
+                          </p> */}
           </div>
         </Center>
         <div className="hidden md:flex bg-secondary font-text ">
@@ -70,44 +107,49 @@ const Nav = ({
               // href="/resume.pdf"
               onClick={() => setResumeModalOpen(() => true)}
               isExternal
-              className="hover:-translate-y-0.5 transition ease-in-out"
+              className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
               contact
             </Link>
-            <Center height="30px">
+            <Center height="30px" className="my-auto">
               <Divider orientation="vertical" />
             </Center>
             <Link
               href="https://github.com/AtharvaKamble"
               isExternal
-              className="hover:-translate-y-0.5 transition ease-in-out"
+              className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
               github
             </Link>
             <Link
               href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
               isExternal
-              className="hover:-translate-y-0.5 transition ease-in-out"
+              className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
               linkedin
             </Link>
 
-            <Center height="30px">
+            <Center height="30px" className="my-auto">
               <Divider orientation="vertical" />
             </Center>
             <Link
               href="/blog"
-              className="hover:-translate-y-0.5 transition ease-in-out"
+              className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
               blogs
             </Link>
             <Link
               href="https://medium.com/@atharvadkamble00"
               isExternal
-              className="hover:-translate-y-0.5 transition ease-in-out"
+              className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
               medium
             </Link>
+
+            <DarkModeToggle
+              toggle={darkModeToggle}
+              setToggle={setDarkModeToggle}
+            />
           </div>
         </div>
         <Drawer
@@ -184,6 +226,21 @@ const Nav = ({
                       medium
                     </Link>
                   </Button>
+
+                  <Button
+                    leftIcon={<Pencil1Icon />}
+                    color="white"
+                    bgColor="black"
+                    variant="solid"
+                    className="w-full"
+                  >
+                    <Link
+                      href="https://medium.com/@atharvadkamble00"
+                      isExternal
+                    >
+                      dark mode
+                    </Link>
+                  </Button>
                 </Stack>
               </Center>
             </div>
@@ -192,6 +249,12 @@ const Nav = ({
             </p>
           </DrawerContent>
         </Drawer>
+
+        <DarkModeToggle
+          className="md:hidden "
+          toggle={darkModeToggle}
+          setToggle={setDarkModeToggle}
+        />
       </div>
     </>
   );

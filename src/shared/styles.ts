@@ -4,7 +4,7 @@ export const TAILWIND = {
     secondary: "bg-white",
   },
   color: {
-    primary: "text-white",
-    secondary: "text-black",
+    primary: "text-black",
+    secondary: "text-white",
   },
 };
