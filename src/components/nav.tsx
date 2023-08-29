@@ -17,7 +17,7 @@ import {
   FileTextIcon,
   Pencil1Icon,
 } from "@radix-ui/react-icons";
-import EmailForResume from "./EmailForResume";
+import EmailForResume from "./Contact";
 
 interface NavProps {
   resumeModalOpen: boolean;
@@ -72,7 +72,7 @@ const Nav = ({
               isExternal
               className="hover:-translate-y-0.5 transition ease-in-out"
             >
-              resume
+              contact
             </Link>
             <Center height="30px">
               <Divider orientation="vertical" />

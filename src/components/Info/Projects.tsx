@@ -12,6 +12,10 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "This site!",
+    url: "https://github.com/AtharvaKamble/atharvakamble.github.io",
+  },
+  {
     title: "cmto",
     url: "https://github.com/AtharvaKamble/cmto",
   },

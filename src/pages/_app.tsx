@@ -1,4 +1,5 @@
-import EmailForResume from "@/components/EmailForResume";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Nav from "@/components/nav";
 import "@/styles/globals.css";
 import { ChakraProvider, Divider } from "@chakra-ui/react";
@@ -17,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           setResumeModalOpen={setResumeModalOpen}
         />
         <Divider />
-        <EmailForResume open={resumeModalOpen} setOpen={setResumeModalOpen} />
+        <Contact open={resumeModalOpen} setOpen={setResumeModalOpen} />
         <Component {...pageProps} />
       </div>
     </ChakraProvider>
