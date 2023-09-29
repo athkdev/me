@@ -9,7 +9,7 @@ export default function Blog() {
   }
 
   return (
-    <Center className="m-6">
+    <Center className="min-h-screen">
       <Stack className="text-center">
         <div className="text-xs mb-4 p-4 bg-neutral-800 rounded">
           Check out my Leetcode resources on Notion.{" "}

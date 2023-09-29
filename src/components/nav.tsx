@@ -1,21 +1,14 @@
-import { ReactElement, useState, useEffect } from "react";
+import { ReactElement, useState } from "react";
 import {
   Button,
   Center,
   Divider,
   Drawer,
   DrawerContent,
-  DrawerOverlay,
   Link,
   Stack,
-  Switch,
 } from "@chakra-ui/react";
-import {
-  ArrowUpIcon,
-  HamburgerIcon,
-  MoonIcon,
-  SunIcon,
-} from "@chakra-ui/icons";
+import { ArrowUpIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   LinkedInLogoIcon,
   TextAlignLeftIcon,
@@ -24,45 +17,21 @@ import {
   Pencil1Icon,
 } from "@radix-ui/react-icons";
 
-import { CustomStyles, TAILWIND } from "@/shared";
 import _ from "lodash";
-import DarkModeToggle from "./DarkModeToggle";
-
 interface NavProps {
   resumeModalOpen: boolean;
   setResumeModalOpen: any;
-  darkModeToggle: boolean;
-  setDarkModeToggle: any;
-  setStyles: any;
 }
 
 const Nav = ({
   resumeModalOpen,
   setResumeModalOpen,
-  darkModeToggle,
-  setDarkModeToggle,
-  setStyles,
 }: NavProps): ReactElement => {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
-
-  const mode = "dark";
-  const _initTitleColorStyle =
-    mode === "dark" ? TAILWIND.color.secondary : TAILWIND.color.primary;
-  const [titleColorStyle, setTitleColorStyle] =
-    useState<string>(_initTitleColorStyle);
 
   const handleOnDrawerOpen = () => {
     setDrawerOpen((prev) => !prev);
   };
-
-  useEffect(() => {
-    // set cookie as well
-    setTitleColorStyle((color) => {
-      return color === TAILWIND.color.secondary
-        ? TAILWIND.color.primary
-        : TAILWIND.color.secondary;
-    });
-  }, [darkModeToggle]);
 
   return (
     <>
@@ -80,7 +49,7 @@ const Nav = ({
             <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
               My name is{" "}
               <span
-                className={`name underline underline-offset-2 hover:bg-amber-400 cursor-pointer ${titleColorStyle}`}
+                className={`name underline underline-offset-2 hover:bg-amber-400 cursor-pointer`}
               >
                 <Link href="/">Atharva Kamble.</Link>
               </span>
@@ -140,11 +109,6 @@ const Nav = ({
             >
               medium
             </Link>
-
-            <DarkModeToggle
-              toggle={darkModeToggle}
-              setToggle={setDarkModeToggle}
-            />
           </div>
         </div>
         <Drawer
@@ -244,12 +208,6 @@ const Nav = ({
             </p>
           </DrawerContent>
         </Drawer>
-
-        <DarkModeToggle
-          className="md:hidden "
-          toggle={darkModeToggle}
-          setToggle={setDarkModeToggle}
-        />
       </div>
     </>
   );
