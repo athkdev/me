@@ -26,10 +26,12 @@ const education: Education[] = [
     end: "",
     current: true,
     degree: "Master of Science in Information Systems",
-    gpa: "",
+    gpa: "3.9",
     coursework: [
       "Application Engineering and Development",
       "Web design and UX Engineering",
+      "Building Virtual Environments",
+      "Cryptocurrency and Smart Contract Engineering"
     ],
   },
   {
@@ -38,7 +40,7 @@ const education: Education[] = [
     end: "May 2022",
     current: false,
     degree: "Bachelor of Engineering, Electronics and Telecommunications",
-    gpa: "8.55/10",
+    gpa: "8.6/10",
     coursework: ["OOP", "DBMS", "Computer Networks", "Image Processing"],
   },
 ];
