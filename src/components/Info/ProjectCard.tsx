@@ -20,12 +20,12 @@ export default function ProjectCard({
     <Link href={url} isExternal>
       <div
         key={key}
-        className={`p-2 relative flex flex-col justify-between rounded border-2 border-white text-white font-semibold h-48 hover:-translate-y-1 hover:bg-amber-500 transition hover:ease-in-out ${className}`}
+        className={`p-2 relative flex flex-col justify-between rounded border-2 border-white text-white font-semibold h-60 hover:-translate-y-1 transition hover:ease-in-out ${className}`}
         title={desc}
       >
         <span className="text-base font-extrabold">{title}</span>
         <span className="text-sm font-thin no-underline">{desc}</span>
-        <p className="bg-white text-black mt-2 text-xs"></p>
+        <p className="bg-white text-black mt-2 text-[9px]"></p>
       </div>
     </Link>
   );

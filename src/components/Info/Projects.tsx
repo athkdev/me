@@ -39,7 +39,7 @@ export default function Projects({ className }: ProjectProps): ReactElement {
     return (
         <div className={`${className}`}>
             <p className="mb-2">Projects</p>
-            <div className="grid grid-row-2 sm:grid-cols-4 gap-4 my-4">
+            <div className="grid grid-row-2 sm:grid-cols-3 gap-4 my-4">
                 {projects?.map(({ title, url, desc }) => {
                     return (
                         <ProjectCard key={title.toLowerCase()} title={title} url={url} desc={desc} />
