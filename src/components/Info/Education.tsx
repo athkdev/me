@@ -40,7 +40,7 @@ const education: Education[] = [
     end: "May 2022",
     current: false,
     degree: "Bachelor of Engineering, Electronics and Telecommunications",
-    gpa: "8.6/10",
+    gpa: "3.6",
     coursework: ["OOP", "DBMS", "Computer Networks", "Image Processing"],
   },
 ];

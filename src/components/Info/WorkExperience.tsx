@@ -24,8 +24,8 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    title: "Programmer Analyst",
-    start: "July 2022",
+    title: "Programmer Analyst Trainee",
+    start: "August 2022",
     end: "July 2023",
     current: false,
     description:
