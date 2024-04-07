@@ -10,13 +10,13 @@ export default function Blog() {
 
   return (
     <Center className="min-h-screen">
-      <Stack className="text-center">
-        <div className="text-xs mb-4 p-4 bg-neutral-800 rounded">
+      <Stack className="text-center min-h-screen">
+        {/* <p className="mb-2 mx-auto text-xs sm:text-base">These are my blogs!</p> */}
+        <div className="text-xs my-4 p-4 bg-neutral-800 rounded">
           Check out my Leetcode resources on Notion.{" "}
           <Link
             href="https://adkio.notion.site/adkio/Leetcode-w-me-753a277aeab2456d9773478ef0d11a3c"
             className="m-2"
-            isExternal
           >
             <Button
               colorScheme="yellow"
@@ -36,14 +36,13 @@ export default function Blog() {
             </Button>
           </Link>
         </div>
-        <p className="mb-2 mx-auto text-xs sm:text-base">These are my blogs!</p>
         <div className="grid grid-cols-2 gap-6">
           <BlogCard
             imageUrl="https://miro.medium.com/max/640/1*4aUPydBnK6n-i3oI0eWVkw.gif"
             imageAltText="Homer simpson clones and Peter Griffin."
             title="Open-source. What? Why? How?"
+            blogUrl="/blog/1"
           />
-
         </div>
       </Stack>
     </Center>
