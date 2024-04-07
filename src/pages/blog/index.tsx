@@ -17,6 +17,7 @@ export default function Blog() {
           <Link
             href="https://adkio.notion.site/adkio/Leetcode-w-me-753a277aeab2456d9773478ef0d11a3c"
             className="m-2"
+            isExternal
           >
             <Button
               colorScheme="yellow"
