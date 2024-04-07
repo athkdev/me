@@ -42,7 +42,7 @@ export default function Blog() {
             imageUrl="https://miro.medium.com/max/640/1*4aUPydBnK6n-i3oI0eWVkw.gif"
             imageAltText="Homer simpson clones and Peter Griffin."
             title="Open-source. What? Why? How?"
-            blogUrl="/blog/1"
+            blogUrl="https://medium.com/@atharvadkamble00/open-source-what-why-how-c8b7d2798573"
           />
         </div>
       </Stack>
