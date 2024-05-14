@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactElement, useState } from "react";
 import { useRouter } from "next/router";
 import { HeartFilledIcon, HeartIcon, Share2Icon } from "@radix-ui/react-icons";
