@@ -1,5 +1,6 @@
 import BlogCard from "@/components/Blog/BlogCard";
 import { Button, Center, Grid, Link, Stack } from "@chakra-ui/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { useState } from "react";
 
 export default function Blog() {
@@ -46,6 +47,8 @@ export default function Blog() {
           />
         </div>
       </Stack>
+
+      <GoogleAnalytics gaId="G-DS9411FNK4" />
     </Center>
   );
 }
