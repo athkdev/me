@@ -21,27 +21,33 @@ interface Education {
 
 const education: Education[] = [
   {
-    institution: "Northeastern University",
+    institution: "Northeastern University, Boston",
     start: "September 2023",
     end: "",
     current: true,
-    degree: "Master of Science in Information Systems",
+    degree: "Master of Science, Information Systems",
     gpa: "3.9",
     coursework: [
       "Application Engineering and Development",
       "Web design and UX Engineering",
       "Building Virtual Environments",
-      "Cryptocurrency and Smart Contract Engineering"
+      "Cryptocurrency and Smart Contract Engineering",
     ],
   },
   {
-    institution: "University of Mumbai",
+    institution: "University of Mumbai, Mumbai",
     start: "Aug 2018",
     end: "May 2022",
     current: false,
     degree: "Bachelor of Engineering, Electronics and Telecommunications",
     gpa: "3.6",
-    coursework: ["OOP", "DBMS", "Computer Networks", "Image Processing"],
+    coursework: [
+      "OOP",
+      "DBMS",
+      "Computer Networks",
+      "Image Processing",
+      "Applied Mathematics",
+    ],
   },
 ];
 
