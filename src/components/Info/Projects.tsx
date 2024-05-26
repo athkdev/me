@@ -42,6 +42,27 @@ const projects: Project[] = [
     imgUrl: "",
     hostedUrl: "",
   },
+  {
+    title: "The Asylum Nightmares",
+    desc: "A third person horror game made using Unreal Engine 5 as part of capstone project for CSYE 7270 at Northeastern University",
+    sourceUrl: "https://github.com/AtharvaKamble/tll",
+    imgUrl: "",
+    hostedUrl: "https://youtu.be/Ya-qxkFE-30",
+  },
+  {
+    title: "ImageVibe - NFT Marketplace",
+    desc: "Diving my hands into the web3 dApp ecosystems with Ethereum, Solidity, ether.js, and wallet integration. The project makes use of the ERC 721 standard for minting NFTs or Non-Fungible Tokens. The NFTs are created on IPFS p2p network, and the website is hosted on IPFS too!",
+    sourceUrl: "https://github.com/AtharvaKamble/tll",
+    imgUrl: "",
+    hostedUrl: "",
+  },
+  {
+    title: "WheresMyBlock - blockchain explorer for the Bitcoin ecosystem",
+    desc: "A frontend application that helps blockchain enthusiasts to explore the current whereabouts of Bitcoin by keeping track of blockchain and cryptocurrency fundamentals such as block height, node location and latency, exchange rate, transactios, senders and receivers.",
+    sourceUrl: "https://github.com/AtharvaKamble/tll",
+    imgUrl: "",
+    hostedUrl: "",
+  },
 ];
 
 export default function Projects({ className }: ProjectProps): ReactElement {
