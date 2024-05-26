@@ -57,7 +57,7 @@ const projects: Project[] = [
     hostedUrl: "",
   },
   {
-    title: "WheresMyBlock - blockchain explorer for the Bitcoin ecosystem",
+    title: "WheresMyBlock - blockchain analyzer",
     desc: "A frontend application that helps blockchain enthusiasts to explore the current whereabouts of Bitcoin by keeping track of blockchain and cryptocurrency fundamentals such as block height, node location and latency, exchange rate, transactios, senders and receivers.",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
     imgUrl: "",
