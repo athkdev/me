@@ -36,7 +36,7 @@ export default function ProjectCard({
         <HoverCardTrigger>
           <span className="text-base text-gray-300">{title}</span>
           {/* <span className="text-sm font-thin no-underline">{desc}</span> */}
-          <img src={imgUrl} className="rounded mt-2" />
+          <img src={imgUrl} className="rounded mt-2"/>
         </HoverCardTrigger>
         <div className="flex gap-5 mt-2">
           <Link

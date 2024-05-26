@@ -46,7 +46,7 @@ const projects: Project[] = [
     title: "The Asylum Nightmares",
     desc: "A third person horror game made using Unreal Engine 5 as part of capstone project for CSYE 7270 at Northeastern University",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
-    imgUrl: "",
+    imgUrl: "/game_ue5.gif",
     hostedUrl: "https://youtu.be/Ya-qxkFE-30",
   },
   {
