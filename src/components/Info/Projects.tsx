@@ -29,20 +29,6 @@ const projects: Project[] = [
     hostedUrl: "https://present-self.vercel.app/landing",
   },
   {
-    title: "Relations builder",
-    desc: "Allows users to add people and add relations between them somewhat close to social networks like FaceBook, LinkedIn, Instagram",
-    sourceUrl: "https://github.com/AtharvaKamble/relation-builder",
-    imgUrl: "",
-    hostedUrl: "",
-  },
-  {
-    title: "TLL - The Learners' Language",
-    desc: "A language compiler written in Java as a passion project that implements easier syntax by trying to get as close to everyday lingo",
-    sourceUrl: "https://github.com/AtharvaKamble/tll",
-    imgUrl: "",
-    hostedUrl: "",
-  },
-  {
     title: "The Asylum Nightmares",
     desc: "A third person horror game made using Unreal Engine 5 as part of capstone project for CSYE 7270 at Northeastern University",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
@@ -53,14 +39,14 @@ const projects: Project[] = [
     title: "ImageVibe - NFT Marketplace",
     desc: "Diving my hands into the web3 dApp ecosystems with Ethereum, Solidity, ether.js, and wallet integration. The project makes use of the ERC 721 standard for minting NFTs or Non-Fungible Tokens. The NFTs are created on IPFS p2p network, and the website is hosted on IPFS too!",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
-    imgUrl: "",
+    imgUrl: "/image_vibe.gif",
     hostedUrl: "",
   },
   {
     title: "WheresMyBlock - blockchain analyzer",
     desc: "A frontend application that helps blockchain enthusiasts to explore the current whereabouts of Bitcoin by keeping track of blockchain and cryptocurrency fundamentals such as block height, node location and latency, exchange rate, transactios, senders and receivers.",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
-    imgUrl: "",
+    imgUrl: "/btc_explorer.gif",
     hostedUrl: "",
   },
 ];
