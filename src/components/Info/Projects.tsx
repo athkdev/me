@@ -17,7 +17,7 @@ const projects: Project[] = [
   {
     title: "This site!",
     desc: "Built in Next.js, hosted on GitHub pages, this site is kind of like the initial screening of knowing me - to know me more, lets network!",
-    sourceUrl: "https://github.com/AtharvaKamble/atharvakamble.github.io",
+    sourceUrl: "https://github.com/AtharvaKamble/me",
     imgUrl: "/thissite.gif",
     hostedUrl: "https://athk.dev",
   },

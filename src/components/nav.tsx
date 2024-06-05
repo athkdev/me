@@ -49,7 +49,7 @@ const Nav = ({
             <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
               My name is{" "}
               <span
-                className={`name underline underline-offset-2 hover:bg-amber-400 cursor-pointer`}
+                className={`name underline underline-offset-2 hover:bg-amber-400 cursor-pointer font-extrabold text-gray-200 hover:text-white`}
               >
                 <Link href="/">Atharva Kamble.</Link>
               </span>
@@ -100,7 +100,7 @@ const Nav = ({
               href="/blog"
               className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
-              blogs
+              blog
             </Link>
             <Link
               href="https://medium.com/@atharvadkamble00"
@@ -169,7 +169,7 @@ const Nav = ({
                     variant="solid"
                     className="w-full"
                   >
-                    <Link href="/blog">blogs</Link>
+                    <Link href="/blog">blog</Link>
                   </Button>
                   <Button
                     leftIcon={<Pencil1Icon />}
