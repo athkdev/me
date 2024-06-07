@@ -6,7 +6,7 @@
 
 
 * {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Karla', sans-serif !important;
 }
  
 @layer base {
