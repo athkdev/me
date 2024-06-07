@@ -97,7 +97,8 @@ const Nav = ({
               <Divider orientation="vertical" />
             </Center>
             <Link
-              href="/blog"
+              isExternal
+              href="https://blog.athk.dev"
               className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
               blog
@@ -169,7 +170,7 @@ const Nav = ({
                     variant="solid"
                     className="w-full"
                   >
-                    <Link href="/blog">blog</Link>
+                    <Link isExternal href="https://blog.athk.dev">blog</Link>
                   </Button>
                   <Button
                     leftIcon={<Pencil1Icon />}
