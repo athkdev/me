@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider>
-      <div className={`bg-black text-white`}>
+      <div className={`bg-zinc-900 text-white`}>
         <Nav
           key="nav"
           resumeModalOpen={resumeModalOpen}
