@@ -26,7 +26,7 @@ const projects: Project[] = [
     desc: "A presentation app designed beautifully by keeping an animation-first approach in mind making it easier to make academic presentations",
     sourceUrl: "https://github.com/AtharvaKamble/present",
     imgUrl: "/present.gif",
-    hostedUrl: "https://present-self.vercel.app/landing",
+    hostedUrl: "https://projects.athk.dev/present",
   },
   {
     title: "The Asylum Nightmares",
