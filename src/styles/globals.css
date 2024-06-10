@@ -8,6 +8,11 @@
 * {
     font-family: 'Karla', sans-serif !important;
 }
+
+*::selection {
+    background-color: #d5d5d5 !important;
+    color: #161616 !important;
+}
  
 @layer base {
   :root {
