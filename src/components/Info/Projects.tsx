@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import ProjectCard from "./ProjectCard";
+import dynamic from "next/dynamic";
 
 interface ProjectProps {
   className?: string;
@@ -18,38 +18,40 @@ const projects: Project[] = [
     title: "This site!",
     desc: "Built in Next.js, hosted on GitHub pages, this site is kind of like the initial screening of knowing me - to know me more, lets network!",
     sourceUrl: "https://github.com/AtharvaKamble/me",
-    imgUrl: "/thissite.gif",
+    imgUrl: "https://cdn.athk.dev/gif/thissite.gif",
     hostedUrl: "https://athk.dev",
   },
   {
     title: "Present - a presentation app",
     desc: "A presentation app designed beautifully by keeping an animation-first approach in mind making it easier to make academic presentations",
     sourceUrl: "https://github.com/AtharvaKamble/present",
-    imgUrl: "/present.gif",
+    imgUrl: "https://cdn.athk.dev/gif/present.gif",
     hostedUrl: "https://projects.athk.dev/present",
   },
   {
     title: "The Asylum Nightmares",
     desc: "A third person horror game made using Unreal Engine 5 as part of capstone project for CSYE 7270 at Northeastern University",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
-    imgUrl: "/game_ue5.gif",
+    imgUrl: "https://cdn.athk.dev/gif/game_ue5.gif",
     hostedUrl: "https://youtu.be/Ya-qxkFE-30",
   },
   {
     title: "ImageVibe - NFT Marketplace",
     desc: "Diving my hands into the web3 dApp ecosystems with Ethereum, Solidity, ether.js, and wallet integration. The project makes use of the ERC 721 standard for minting NFTs or Non-Fungible Tokens. The NFTs are created on IPFS p2p network, and the website is hosted on IPFS too!",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
-    imgUrl: "/image_vibe.gif",
+    imgUrl: "https://cdn.athk.dev/gif/image_vibe.gif",
     hostedUrl: "",
   },
   {
     title: "WheresMyBlock - blockchain analyzer",
     desc: "A frontend application that helps blockchain enthusiasts to explore the current whereabouts of Bitcoin by keeping track of blockchain and cryptocurrency fundamentals such as block height, node location and latency, exchange rate, transactios, senders and receivers.",
     sourceUrl: "https://github.com/AtharvaKamble/tll",
-    imgUrl: "/btc_explorer.gif",
+    imgUrl: "https://cdn.athk.dev/gif/btc_explorer.gif",
     hostedUrl: "",
   },
 ];
+
+const LazyProjectCard = dynamic(() => import("./ProjectCard"));
 
 export default function Projects({ className }: ProjectProps): ReactElement {
   return (
@@ -58,7 +60,7 @@ export default function Projects({ className }: ProjectProps): ReactElement {
       <div className="grid grid-row-2 sm:grid-cols-2 gap-4 my-4">
         {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl }) => {
           return (
-            <ProjectCard
+            <LazyProjectCard
               key={title.toLowerCase()}
               title={title}
               sourceUrl={sourceUrl}
