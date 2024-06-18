@@ -86,7 +86,7 @@ const Nav = ({
               github
             </Link>
             <Link
-              href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
+              href="https://www.linkedin.com/in/athk"
               isExternal
               className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
@@ -157,7 +157,7 @@ const Nav = ({
                     className="w-full"
                   >
                     <Link
-                      href="https://www.linkedin.com/in/atharva-kamble-0b14b71b8/"
+                      href="https://www.linkedin.com/in/athk"
                       isExternal
                     >
                       linkedin
