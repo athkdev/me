@@ -29,8 +29,8 @@ const jobs: Job[] = [
     end: "July 2023",
     current: false,
     description:
-      "Used Java Spring and Angular along with AWS and Oracle DB to build full stack web products!",
-    techStack: ["Spring Boot", "AWS", "Angular", "Docker"],
+      "Worked extensively with Java Spring and ReactJS along with AWS and PostgreSQL to build impactful full stack web products!",
+    techStack: ["Spring Boot", "AWS", "ReactJS", "Docker"],
     company: "Cognizant Technology Solutions",
     companyLink: "https://www.cognizant.com/in/en",
   },
@@ -41,7 +41,7 @@ const jobs: Job[] = [
     current: false,
     description:
       "Built e-commerce products for Shopify, loyalty rewards apps for local businesses in Dublin, Ireland.",
-    techStack: ["Nextjs", "React", "Express", "GraphQL", "TS"],
+    techStack: ["NextJS", "ReactJS", "Express", "GraphQL", "TS"],
     company: "RaftLabs Co.",
     companyLink: "https://www.raftlabs.co",
   },

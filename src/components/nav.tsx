@@ -48,22 +48,14 @@ const Nav = ({
         <Center className="mx-auto">
           <div>
             <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
-              My name is{" "}
+              I am{" "}
               <span
                 className={`name underline underline-offset-2 hover:bg-amber-400 cursor-pointer font-extrabold text-gray-200 hover:text-white`}
               >
                 <Link href="/">Atharva Kamble.</Link>
-              </span>
+              </span>{" "}
+              I build.
             </h1>
-            {/* <p className="font-text">
-                            I am a
-                            <span id="roles" className="button-secondary">
-                            software engineer
-                            </span>
-                            <span id="hover-box" className="hover-box slide-right">
-                          *click click*
-                          </span>
-                          </p> */}
           </div>
         </Center>
         <div className="hidden md:flex bg-secondary font-text ">
@@ -76,9 +68,8 @@ const Nav = ({
               resume
             </Link>
             <Link
-              // href="/resume.pdf"
-              onClick={() => setResumeModalOpen(() => true)}
-              isExternal
+              href="/contact"
+              // onClick={() => setResumeModalOpen(() => true)}
               className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
               contact
@@ -147,8 +138,8 @@ const Nav = ({
                   </Link>
 
                   <Link
-                    onClick={() => setResumeModalOpen(() => true)}
-                    isExternal
+                    href="/contact"
+                    // onClick={() => setResumeModalOpen(() => true)}
                   >
                     <Button
                       leftIcon={<EnvelopeClosedIcon />}
