@@ -24,24 +24,35 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    title: "Programmer Analyst Trainee",
+    title: "Graduate Teaching Assistant",
     start: "August 2022",
-    end: "July 2023",
+    end: "May 2023",
+    current: true,
+    description:
+      "Currently working as a Graduate Teaching Assistant for CSYE 7270 (Building Virtual Environments) at College of Engineering, Northeastern University.",
+    techStack: ["Spring Boot", "AWS", "ReactJS", "Docker", "ElasticSearch", "PostgreSQL"],
+    company: "Cognizant Technology Solutions",
+    companyLink: "https://www.northeastern.edu/",
+  },
+  {
+    title: "Software Engineer 1",
+    start: "August 2022",
+    end: "May 2023",
     current: false,
     description:
       "Worked extensively with Java Spring and ReactJS along with AWS and PostgreSQL to build impactful full stack web products!",
-    techStack: ["Spring Boot", "AWS", "ReactJS", "Docker"],
+    techStack: ["Spring Boot", "AWS", "ReactJS", "Docker", "ElasticSearch", "PostgreSQL"],
     company: "Cognizant Technology Solutions",
     companyLink: "https://www.cognizant.com/in/en",
   },
   {
-    title: "Software Engineer Intern",
+    title: "Junior Software Engineer",
     start: "April 2021",
     end: "Feb 2022",
     current: false,
     description:
       "Built e-commerce products for Shopify, loyalty rewards apps for local businesses in Dublin, Ireland.",
-    techStack: ["NextJS", "ReactJS", "Express", "GraphQL", "TS"],
+    techStack: ["NextJS", "ReactJS", "Express", "GraphQL", "TS", "Redis"],
     company: "RaftLabs Co.",
     companyLink: "https://www.raftlabs.co",
   },
