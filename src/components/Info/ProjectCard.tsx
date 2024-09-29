@@ -16,6 +16,7 @@ interface ProjectCardProps {
   imgUrl: string;
   imgAltText?: string;
   hostedUrl: string;
+  blogUrl: string;
 }
 
 export default function ProjectCard({
@@ -26,6 +27,7 @@ export default function ProjectCard({
   className,
   imgUrl,
   hostedUrl,
+  blogUrl
 }: ProjectCardProps): ReactElement {
   return (
     <HoverCard>
@@ -56,6 +58,17 @@ export default function ProjectCard({
             >
               <span className="text-orange-400">
                 try out <ExternalLinkIcon mx="2px" boxSize={3} />
+              </span>{" "}
+            </Link>
+          ) : null}
+
+          {blogUrl.length > 0 ? (
+            <Link
+              href={blogUrl}
+              className="hover:-translate-y-1 transition hover:ease-in-out"
+            >
+              <span className="text-orange-400">
+                blog <ExternalLinkIcon mx="2px" boxSize={3} />
               </span>{" "}
             </Link>
           ) : null}

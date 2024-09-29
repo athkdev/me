@@ -20,6 +20,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/me",
     imgUrl: "https://cdn.athk.dev/gif/thissite.gif",
     hostedUrl: "https://athk.dev",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "Present - a presentation app",
@@ -27,6 +28,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/present",
     imgUrl: "https://cdn.athk.dev/gif/present.gif",
     hostedUrl: "https://present.athk.dev/present",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "Minecraft chunk with Procedural Terrain Generation",
@@ -34,6 +36,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/minecraft",
     imgUrl: "https://cdn.athk.dev/gif/minecraft.gif",
     hostedUrl: "https://minecraft.athk.dev/",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "My tech blog",
@@ -41,6 +44,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/blog",
     imgUrl: "https://cdn.athk.dev/gif/thissite.gif",
     hostedUrl: "https://blog.athk.dev/",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "The Asylum Nightmares",
@@ -48,6 +52,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble",
     imgUrl: "https://cdn.athk.dev/gif/game_ue5.gif",
     hostedUrl: "https://youtu.be/Ya-qxkFE-30",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "ImageVibe - NFT Marketplace",
@@ -55,6 +60,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/",
     imgUrl: "https://cdn.athk.dev/gif/image_vibe.gif",
     hostedUrl: "",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "WheresMyBlock - blockchain analyzer",
@@ -62,6 +68,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/",
     imgUrl: "https://cdn.athk.dev/gif/btc_explorer.gif",
     hostedUrl: "",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "Edeetor - developer tools",
@@ -69,6 +76,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/edeetor",
     imgUrl: "https://cdn.athk.dev/gif/edeetor.gif",
     hostedUrl: "",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
   {
     title: "Go-pomo - pomodoro in the terminal",
@@ -76,6 +84,7 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/AtharvaKamble/go-pomo",
     imgUrl: "https://cdn.athk.dev/gif/go-pomo.gif",
     hostedUrl: "",
+    blogUrl: "https://blog.athk.dev/projects/portfolio",
   },
 ];
 
@@ -86,7 +95,7 @@ export default function Projects({ className }: ProjectProps): ReactElement {
     <div className={`${className}`}>
       <p className="mb-2">Projects</p>
       <div className="grid grid-row-2 sm:grid-cols-2 gap-4 my-4">
-        {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl }) => {
+        {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }) => {
           return (
             <LazyProjectCard
               key={title.toLowerCase()}
@@ -94,6 +103,7 @@ export default function Projects({ className }: ProjectProps): ReactElement {
               sourceUrl={sourceUrl}
               desc={desc}
               hostedUrl={hostedUrl}
+              blogUrl={blogUrl}
               imgUrl={
                 imgUrl.length > 0
                   ? imgUrl
