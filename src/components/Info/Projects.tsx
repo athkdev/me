@@ -11,6 +11,7 @@ interface Project {
   sourceUrl: string;
   imgUrl: string;
   hostedUrl: string;
+  blogUrl: string;
 }
 
 const projects: Project[] = [
