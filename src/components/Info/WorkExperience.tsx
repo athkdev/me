@@ -30,8 +30,8 @@ const jobs: Job[] = [
     current: true,
     description:
       "Currently working as a Graduate Teaching Assistant for CSYE 7270 (Building Virtual Environments) at College of Engineering, Northeastern University.",
-    techStack: ["Spring Boot", "AWS", "ReactJS", "Docker", "ElasticSearch", "PostgreSQL"],
-    company: "Cognizant Technology Solutions",
+    techStack: ["C++", "C#", "Voiceflow AI"],
+    company: "Northeastern University",
     companyLink: "https://www.northeastern.edu/",
   },
   {
