@@ -2,18 +2,22 @@ import Contact from "@/components/Contact";
 import Nav from "@/components/nav";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { Roboto_Condensed, Abel } from 'next/font/google'
 
 import { ChakraProvider, Divider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import { useState } from "react";
 const _ = require("lodash");
 
+const roboto = Roboto_Condensed({weight: "400", subsets: ['latin']})
+const abel = Abel({weight: "400", subsets: ['latin']})
+
 export default function App({ Component, pageProps }: AppProps) {
     const [resumeModalOpen, setResumeModalOpen] = useState<boolean>(false);
 
     return (
         <ChakraProvider>
-            <div className={`bg-zinc-900 text-white`}>
+            <div className={`bg-zinc-900 text-white ${abel.className}`}>
                 {Component?.name.toLowerCase() === 'resume' ?
                     <>
                         <Component {...pageProps} />
