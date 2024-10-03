@@ -95,7 +95,7 @@ export default function Projects({ className }: ProjectProps): ReactElement {
   return (
     <div className={`${className}`}>
       <p className="mb-2">Projects</p>
-      <div className="grid grid-row-2 sm:grid-cols-2 gap-4 my-4">
+      <div className="grid grid-row-2 sm:grid-cols-2 gap-4 my-4 sm:-mx-20">
         {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }) => {
           return (
             <LazyProjectCard
