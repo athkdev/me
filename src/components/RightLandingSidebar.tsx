@@ -17,7 +17,7 @@ export default function RightLandingSidebar({
         </p>
         <iframe
           className="mx-2 rounded w-full sm:w-64"
-          src="https://open.spotify.com/embed/track/1jDJFeK9x3OZboIAHsY9k2?utm_source=generator"
+          src="https://open.spotify.com/embed/track/5e0b9LgOfi3aJSKXFcOWRe?utm_source=generator"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
