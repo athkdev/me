@@ -21,7 +21,7 @@ export default function About() {
         I am a HUGE mechanical keyboard enthusiast. At the moment, I am using the <a className="italic underline underline-offset-4" href="https://rkgamingstore.com/products/r75-75-wired-gaming-keyboard">Royal Kludge R75</a> with Silver Creamy Linear Switches.
       </p>
       <p className="text-neutral-400 mt-4">
-        Open to roles from May '25.
+        Open to roles from May &apos;25.
       </p>
     </section>
   );
