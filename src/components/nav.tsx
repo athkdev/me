@@ -44,15 +44,15 @@ const Nav = ({
         />
       </div>
       <Divider className="flex md:hidden" orientation="horizontal" />
-      <div className="flex md:grid grid-cols-2 gap-2 p-4">
+      <div className="flex md:grid grid-cols-2 gap-2 p-4 text-stone-400">
         <Center className="mx-auto">
           <div>
-            <h1 className="font-thin text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
+            <h1 className="text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
               I am{" "}
               <span
-                className={`name underline underline-offset-2 hover:bg-amber-400 cursor-pointer font-extrabold text-gray-200 hover:text-white`}
+                className={`name underline underline-offset-2 text-stone-200 hover:bg-amber-400 cursor-pointer font-extrabold text-gray-200 hover:text-white`}
               >
-                <Link href="/">Atharva Kamble.</Link>
+                Atharva.
               </span>{" "}
               I build.
             </h1>

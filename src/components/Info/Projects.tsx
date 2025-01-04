@@ -1,5 +1,7 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import dynamic from "next/dynamic";
+import SectionHeader from "./SectionHeader";
+import ProjectTitle from "./ProjectTitle";
 
 interface ProjectProps {
   className?: string;
@@ -92,9 +94,37 @@ const projects: Project[] = [
 const LazyProjectCard = dynamic(() => import("./ProjectCard"));
 
 export default function Projects({ className }: ProjectProps): ReactElement {
+  const [currentProject, setCurrentProject] = useState<string>('');
+
+  function onHover(url: string) {
+    setCurrentProject(() => url);
+  }
+
   return (
-    <div className={`${className}`}>
-      <p className="mb-2">Projects</p>
+    <section className={`min-h-screen min-w-full ${className}`}>
+
+      <SectionHeader>projects</SectionHeader>
+
+      {/* <div className="relative min-w-full flex lg:-ml-96">
+        <div className="z-10 w-1/2 bg-gradient-to-r from-black via-black to-transparent">
+        {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }) => {
+          return (
+          <ProjectTitle key={title} onHover={onHover} url={imgUrl}>{title}</ProjectTitle>
+        )})}
+      </div>
+      <div className="absolute top-0 right-0 w-3/4 h-full">
+        <div className="relative w-full h-full">
+          <img 
+            src={currentProject} 
+            className="absolute right-0 w-2/3 h-full object-cover rounded mt-2" 
+            alt="Current project"
+          />
+          {/* Gradient overlay for smooth transition */}
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-black via-black/30 to-transparent w-full" />
+        </div>
+      </div>
+      </div> */}
+
       <div className="grid grid-row-2 sm:grid-cols-2 gap-4 my-4 sm:-mx-20">
         {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }) => {
           return (
@@ -114,6 +144,6 @@ export default function Projects({ className }: ProjectProps): ReactElement {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

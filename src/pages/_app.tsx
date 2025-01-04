@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return (
         <ChakraProvider>
-            <div className={`bg-zinc-900 text-white ${abel.className}`}>
+            <div className={`bg-zinc-900 text-white ${geist.className}`}>
                 {Component?.name.toLowerCase() === 'resume' ?
                     <>
                         <Component {...pageProps} />

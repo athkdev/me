@@ -6,6 +6,8 @@ import Title from "./Title";
 
 import { Link } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import localFont from 'next/font/local';
+import SectionHeader from "./SectionHeader";
 
 interface WorkExperienceProps {
   className: string;
@@ -60,8 +62,9 @@ const jobs: Job[] = [
 
 export default function WorkExperience({ className }: WorkExperienceProps) {
   return (
-    <div className={`${className}`}>
-      <p className="mb-2">Work experience</p>
+    <section className={`${className}`}>
+      <SectionHeader>work experience</SectionHeader>
+
       <div className="grid grid-row-2 sm:grid-cols-6 my-4">
         {jobs.map(
           ({
@@ -103,6 +106,6 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
           }
         )}
       </div>
-    </div>
+    </section>
   );
 }

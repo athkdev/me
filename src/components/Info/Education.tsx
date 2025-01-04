@@ -4,6 +4,8 @@ import DateRange from "./DateRange";
 import Description from "./Description";
 import Details from "./Details";
 import Title from "./Title";
+import SectionHeader from "./SectionHeader";
+
 
 interface EducationProps {
   className: string;
@@ -57,8 +59,8 @@ const education: Education[] = [
 
 export default function Education({ className }: EducationProps): ReactElement {
   return (
-    <div className={`${className}`}>
-      <p className="mb-2">Education</p>
+    <section className={`${className}`}>
+      <SectionHeader>education</SectionHeader>
       <div className="grid grid-row-2 sm:grid-cols-6 my-4">
         {education?.map(
           ({ institution, start, end, current, degree, coursework, gpa }) => {
@@ -86,6 +88,6 @@ export default function Education({ className }: EducationProps): ReactElement {
           }
         )}
       </div>
-    </div>
+    </section>
   );
 }
