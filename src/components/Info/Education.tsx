@@ -5,6 +5,7 @@ import Description from "./Description";
 import Details from "./Details";
 import Title from "./Title";
 import SectionHeader from "./SectionHeader";
+import { Fragment } from "react";
 
 
 interface EducationProps {
@@ -63,9 +64,9 @@ export default function Education({ className }: EducationProps): ReactElement {
       <SectionHeader>education</SectionHeader>
       <div className="grid grid-row-2 sm:grid-cols-6 my-4">
         {education?.map(
-          ({ institution, start, end, current, degree, coursework, gpa }) => {
+          ({ institution, start, end, current, degree, coursework, gpa }, i) => {
             return (
-              <>
+              <Fragment key={i}>
                 <DateRange
                   start={start}
                   current={current}
@@ -83,7 +84,7 @@ export default function Education({ className }: EducationProps): ReactElement {
                     array={coursework}
                   />
                 </Details>
-              </>
+              </Fragment>
             );
           }
         )}

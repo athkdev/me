@@ -37,7 +37,7 @@ const projects: Project[] = [
     title: "Minecraft chunk with Procedural Terrain Generation",
     desc: "",
     sourceUrl: "https://github.com/AtharvaKamble/minecraft",
-    imgUrl: "https://cdn.athk.dev/gif/minecraft.gif",
+    imgUrl: "/cdn/gif/minecraft.gif",
     hostedUrl: "https://minecraft.athk.dev/",
     blogUrl: "https://blog.athk.dev/projects/minecraft-chunk-generator",
   },

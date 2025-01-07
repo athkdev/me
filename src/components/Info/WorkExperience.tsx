@@ -3,6 +3,7 @@ import Description from "./Description";
 import Details from "./Details";
 import BulletedList from "./BulletedList";
 import Title from "./Title";
+import { Fragment } from "react";
 
 import { Link } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
@@ -76,9 +77,9 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
             techStack,
             company,
             companyLink,
-          }) => {
+          }, i) => {
             return (
-              <>
+              <Fragment key={i}>
                 <DateRange
                   start={start}
                   current={current}
@@ -101,7 +102,7 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
                     />
                   </Description>
                 </Details>
-              </>
+              </Fragment>
             );
           }
         )}
