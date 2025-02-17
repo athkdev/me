@@ -24,12 +24,23 @@ const geist = localFont({
     ],
 })
 
+const departureMonoFont = localFont({
+    src: [
+        {
+            path: '../../public/fonts/DepartureMonoNerdFont.otf',
+            weight: '400',
+            style: 'normal'
+        },
+    ],
+    
+})
+
 export default function App({ Component, pageProps }: AppProps) {
     const [resumeModalOpen, setResumeModalOpen] = useState<boolean>(false);
 
     return (
         <ChakraProvider>
-            <div className={`bg-zinc-900 text-white ${geist.className}`}>
+            <div className={`bg-zinc-900 text-white ${departureMonoFont.className}`}>
                 {Component?.name.toLowerCase() === 'resume' ?
                     <>
                         <Component {...pageProps} />
