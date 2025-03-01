@@ -20,6 +20,16 @@ const departureMonoFont = localFont({
   ],
 });
 
+const calendasPlus = localFont({
+  src: [
+    {
+      path: "../../../public/fonts/calendas_plus-webfont.woff",
+      //   weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
 interface TSectionHeaderProps {
   children: ReactNode;
 }
@@ -29,7 +39,7 @@ export default function SectionHeader({
 }: TSectionHeaderProps): ReactElement {
   return (
     <p
-      className={`mb-2 text-4xl ${departureMonoFont.className} font-extrabold text-stone-400`}
+      className={`mb-2 text-4xl ${calendasPlus.className} font-extrabold text-stone-400`}
     >
       {children}
     </p>
