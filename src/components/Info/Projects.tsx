@@ -111,7 +111,9 @@ export default function Projects({ className }: ProjectProps): ReactElement {
         {projects?.map(
           ({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }, i) => {
             return (
-              <StackingCardItem index={i}>
+              <StackingCardItem index={i}
+                  key={title.toLowerCase()}
+              >
                 <LazyProjectCard
                   key={title.toLowerCase()}
                   title={title}
