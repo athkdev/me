@@ -33,7 +33,7 @@ export default function ProjectCard({
     <HoverCard>
       <div
         key={key}
-        className={`p-3 relative flex flex-col justify-between cursor-pointer rounded border-stone-800 bg-neutral-800 text-white font-semibold transition ${className}`}
+        className={`p-3 relative flex flex-col justify-between cursor-pointer rounded border-stone-800 bg-neutral-800  text-white font-semibold transition ${className}`}
       >
         <HoverCardTrigger>
           <span className="text-base text-gray-300">{title}</span>

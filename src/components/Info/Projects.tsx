@@ -124,6 +124,7 @@ export default function Projects({ className }: ProjectProps): ReactElement {
                       ? imgUrl
                       : "https://www.icegif.com/wp-content/uploads/2023/01/icegif-162.gif"
                   }
+                  className={``}
                 />
               </StackingCardItem>
             );
