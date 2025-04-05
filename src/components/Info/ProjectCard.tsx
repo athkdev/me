@@ -1,6 +1,6 @@
-import { Link } from "@chakra-ui/react"
+import { Link } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import {
   HoverCard,
   HoverCardContent,
@@ -27,13 +27,13 @@ export default function ProjectCard({
   className,
   imgUrl,
   hostedUrl,
-  blogUrl
+  blogUrl,
 }: ProjectCardProps): ReactElement {
   return (
     <HoverCard>
       <div
         key={key}
-        className={`p-3 relative flex flex-col justify-between cursor-pointer rounded-sm border-stone-800 text-white font-semibold transition ${className}`}
+        className={`p-3 relative flex flex-col justify-between cursor-pointer rounded border-stone-800 bg-neutral-800 text-white font-semibold transition ${className}`}
       >
         <HoverCardTrigger>
           <span className="text-base text-gray-300">{title}</span>

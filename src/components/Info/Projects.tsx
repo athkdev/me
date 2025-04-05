@@ -2,6 +2,9 @@ import { ReactElement, useState } from "react";
 import dynamic from "next/dynamic";
 import SectionHeader from "./SectionHeader";
 import ProjectTitle from "./ProjectTitle";
+import StackingCards, {
+  StackingCardItem,
+} from "@/fancy/components/blocks/stacking-cards";
 
 interface ProjectProps {
   className?: string;
@@ -94,7 +97,7 @@ const projects: Project[] = [
 const LazyProjectCard = dynamic(() => import("./ProjectCard"));
 
 export default function Projects({ className }: ProjectProps): ReactElement {
-  const [currentProject, setCurrentProject] = useState<string>('');
+  const [currentProject, setCurrentProject] = useState<string>("");
 
   function onHover(url: string) {
     setCurrentProject(() => url);
@@ -102,48 +105,33 @@ export default function Projects({ className }: ProjectProps): ReactElement {
 
   return (
     <section className={`min-h-screen min-w-full ${className}`}>
-
       <SectionHeader>projects</SectionHeader>
 
-      {/* <div className="relative min-w-full flex lg:-ml-96">
-        <div className="z-10 w-1/2 bg-gradient-to-r from-black via-black to-transparent">
-        {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }) => {
-          return (
-          <ProjectTitle key={title} onHover={onHover} url={imgUrl}>{title}</ProjectTitle>
-        )})}
-      </div>
-      <div className="absolute top-0 right-0 w-3/4 h-full">
-        <div className="relative w-full h-full">
-          <img 
-            src={currentProject} 
-            className="absolute right-0 w-2/3 h-full object-cover rounded mt-2" 
-            alt="Current project"
-          />
-          {/* Gradient overlay for smooth transition */}
-          {/* <div className="absolute inset-0 bg-gradient-to-r from-black via-black/30 to-transparent w-full" />
-        </div>
-      </div>
-      </div> */}
+      <StackingCards totalCards={projects.length} scaleMultiplier={0.07}>
+        {projects?.map(
+          ({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }, i) => {
+            return (
+              <StackingCardItem index={i}>
+                <LazyProjectCard
+                  key={title.toLowerCase()}
+                  title={title}
+                  sourceUrl={sourceUrl}
+                  desc={desc}
+                  hostedUrl={hostedUrl}
+                  blogUrl={blogUrl}
+                  imgUrl={
+                    imgUrl.length > 0
+                      ? imgUrl
+                      : "https://www.icegif.com/wp-content/uploads/2023/01/icegif-162.gif"
+                  }
+                />
+              </StackingCardItem>
+            );
+          }
+        )}
+      </StackingCards>
 
-      <div className="grid grid-row-2 sm:grid-cols-2 gap-4 my-4 sm:-mx-20">
-        {projects?.map(({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }) => {
-          return (
-            <LazyProjectCard
-              key={title.toLowerCase()}
-              title={title}
-              sourceUrl={sourceUrl}
-              desc={desc}
-              hostedUrl={hostedUrl}
-              blogUrl={blogUrl}
-              imgUrl={
-                imgUrl.length > 0
-                  ? imgUrl
-                  : "https://www.icegif.com/wp-content/uploads/2023/01/icegif-162.gif"
-              }
-            />
-          );
-        })}
-      </div>
+      <div className="grid grid-row-2 sm:grid-cols-2 gap-4 my-4 sm:-mx-20"></div>
     </section>
   );
 }
