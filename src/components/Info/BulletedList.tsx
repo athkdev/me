@@ -12,10 +12,13 @@ export default function BulletedList({
   className,
 }: BulletedListProps): ReactElement {
   return (
-    <p key={key} className={`${className} text-neutral-400`}>
+    <p key={key} className={`${className} `}>
       {array.map((element, i) => {
         return (
-          <span key={i} className="text-neutral-400 text-xs">
+          <span
+            key={i}
+            className="text-xs odd:text-stone-300 even:text-stone-500"
+          >
             {element} {i < array.length - 1 ? " • " : null}
           </span>
         );

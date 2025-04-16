@@ -58,7 +58,7 @@ const Nav = ({
             </h1>
           </div>
         </Center>
-        <div className="hidden md:flex bg-secondary font-text ">
+        <div className="hidden md:flex font-text">
           <div className="flex mx-auto gap-2 my-auto">
             <Link
               href="/resume"

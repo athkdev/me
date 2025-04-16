@@ -6,6 +6,12 @@ import Details from "./Details";
 import Title from "./Title";
 import SectionHeader from "./SectionHeader";
 import { Fragment } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 
 interface EducationProps {
@@ -25,17 +31,19 @@ interface Education {
 const education: Education[] = [
   {
     institution: "Northeastern University, Boston",
-    start: "September 2023",
+    start: "Sept 2023",
     end: "",
     current: true,
-    degree: "Master of Science, Computer Software Engineering",
+    degree: "Master of Science, Information Systems (full stack web, and infrastructure)",
     gpa: "3.9",
     coursework: [
-      "Application Engineering and Development",
-      "Web design and UX Engineering",
+      "Algorithms",
+      "Web development",
+      "Operating Systems",
+      "Linux/UNIX",
+      "Application Engineering",
       "Building Virtual Environments",
       "Cryptocurrency and Smart Contract Engineering",
-      "Algorithms",
       "Design Patterns",
     ],
   },
@@ -78,11 +86,18 @@ export default function Education({ className }: EducationProps): ReactElement {
                   <p className="text-neutral-400 my-1 text-xs">
                     {degree}, {gpa}
                   </p>
-                  <BulletedList
-                    className="mb-8"
-                    key={institution.toLowerCase()}
-                    array={coursework}
-                  />
+                  <Accordion type="single" collapsible className="text-neutral-400">
+                      <AccordionItem value="item-1" className="border-none">
+                        <AccordionTrigger>Courses</AccordionTrigger>
+                        <AccordionContent>
+                          <BulletedList
+                            className="mb-8"
+                            key={institution.toLowerCase()}
+                            array={coursework}
+                          />
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
                 </Details>
               </Fragment>
             );

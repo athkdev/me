@@ -14,12 +14,12 @@ export default function Info({ className }: InfoProps): ReactElement {
   return (
     <div className={`${className} lg:w-2/5 text-sm`}>
       <About />
-      <hr className="mt-10 border-stone-600"/>
+      <hr className="mt-10 border-stone-600" />
       <Education className="mt-10" />
-      <hr className="mt-10 border-stone-600"/>
-      <Projects className="mt-10" />
-      <hr className="mt-10 border-stone-600"/>
+      <hr className="mt-10 border-stone-600" />
       <WorkExperience className="mt-10" />
+      <hr className="mt-10 border-stone-600" />
+      <Projects className="mt-10" />
     </div>
   );
 }
