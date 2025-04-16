@@ -105,7 +105,7 @@ export default function Projects({ className }: ProjectProps): ReactElement {
 
   return (
     <section className={`min-h-screen min-w-full ${className}`}>
-      <SectionHeader>some projects i've built</SectionHeader>
+      <SectionHeader>some projects i&apos;ve built</SectionHeader>
 
       <StackingCards totalCards={projects.length} scaleMultiplier={0.07}>
         {projects?.map(
