@@ -94,7 +94,7 @@ export default function ResumeStatic() {
                 <li>Developed a website for a supply chain analytics tool, optimizing delivery schedules and inventory management with scalable React, and Java. Used the in-browser IndexedDB for local caching resulting in extremely fast user experience.</li>
                 <li>Implemented an automated CI/CD pipeline using GitHub Actions and Python to schedule blog posts for the marketing team - resulting in an efficient workflow with no manual overhead.</li>
                 <li>Revamped a financial loyalty app for the Bank of Ireland using React, GraphQL, Python (Django), and Docker to streamline revenue tracking and help customers gain rewards.</li>
-                <li>Integrated Meta's webhooks with Shopify and Node.js to help viewers buy products by commenting codes in Facebook live streams.</li>
+                <li>Integrated Meta&apos;s webhooks with Shopify and Node.js to help viewers buy products by commenting codes in Facebook live streams.</li>
                 <li>Coded a proof of concept for an efficient coupon distribution system in Typescript, Node.js and PostgreSQL that could handle 2000 requests per second.</li>
             </ul>
 
@@ -128,7 +128,7 @@ export default function ResumeStatic() {
             <ul className="list-disc ml-5 text-[#616161]">
                 <li>Highly performant web crawler in Java that includes a CLI and stores all URLs in a graph data structure using Neo4j.</li>
                 <li>Applied design principles for a scalable and low-latency architecture. Store URLs in Neo4J database concurrently in a graph format.</li>
-                <li>Utilised Java's CompletableFuture API to achieve concurrency and parallelism. Benchmarked at 730 URLs per second.</li>
+                <li>Utilised Java&apos;s CompletableFuture API to achieve concurrency and parallelism. Benchmarked at 730 URLs per second.</li>
                 <li>Built with Java and Neo4J.</li>
             </ul>
         </div>
