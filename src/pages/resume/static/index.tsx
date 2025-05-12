@@ -1,6 +1,6 @@
 
 import { GoogleAnalytics } from "@next/third-parties/google";
-export default function Resume() {
+export default function ResumeStatic() {
     return (
         <div className="font-sans text-black bg-white max-w-[1200px] mx-auto p-5 leading-relaxed p-12">
             <div className="flex justify-between items-start">
