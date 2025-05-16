@@ -6,5 +6,5 @@ interface TitleProps {
 }
 
 export default function Title({ name, className }: TitleProps): ReactElement {
-  return <p className={`${className}`}>{name}</p>;
+  return <p className={`${className} text-neutral-800`}>{name}</p>;
 }

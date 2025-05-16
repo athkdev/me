@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from "react";
-import {headerFont} from "@/shared/fonts";
+import { headerFont, primaryFont } from "@/shared/fonts";
 
 interface TSectionHeaderProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ export default function SectionHeader({
 }: TSectionHeaderProps): ReactElement {
   return (
     <p
-      className={`mb-2 text-4xl ${headerFont.className} font-extrabold text-stone-400`}
+      className={`mb-2 ${primaryFont.className} text-black`}
     >
       {children}
     </p>

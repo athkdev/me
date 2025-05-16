@@ -29,7 +29,7 @@ export default function About() {
       </p>
       <p className="mt-4 flex items-center text-xs text-neutral-400">
         <span className="mr-2 inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-        Open to roles from May &apos;25.
+        Open to roles from May &apos;25 across the US.
       </p>
     </section>
   );

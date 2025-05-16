@@ -9,15 +9,15 @@ export default function RightLandingSidebar({
 }: RightLandingSidebarProps) {
   return (
     <div
-      className={`${className} text-center lg:border-l border-l-zinc-700 p-4`}
+      className={`${className} text-center lg:border-l lg:border-dashed border-l-zinc-700 p-4`}
     >
       <Stack className="sticky top-5">
-        <p className="mx-auto text-xs font-extralight animate-bounce">
-          Currently listening
+        <p className="mx-auto text-xs animate-bounce">
+          currently listening
         </p>
         <iframe
           className="mx-2 rounded w-full sm:w-64"
-          src="https://open.spotify.com/embed/track/40riOy7x9W7GXjyGp4pjAv"
+          src="https://open.spotify.com/embed/track/2OwIGCjx7e7J1HHdAqIv21"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>

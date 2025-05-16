@@ -32,9 +32,9 @@ const education: Education[] = [
   {
     institution: "Northeastern University, Boston",
     start: "Sept 2023",
-    end: "",
-    current: true,
-    degree: "Master of Science, Information Systems (full stack web, and infrastructure)",
+    end: "May 2025",
+    current: false,
+    degree: "Master of Science, CS + Information Systems (full stack web, and cloud infrastructure)",
     gpa: "3.9",
     coursework: [
       "Algorithms",
@@ -82,22 +82,22 @@ export default function Education({ className }: EducationProps): ReactElement {
                   className="mb-1"
                 />
                 <Details>
-                  <Title name={institution} className="" />
+                  <Title name={institution} />
                   <p className="text-neutral-400 my-1 text-xs">
                     {degree}, {gpa}
                   </p>
                   <Accordion type="single" collapsible className="text-neutral-400">
-                      <AccordionItem value="item-1" className="border-none">
-                        <AccordionTrigger>Courses</AccordionTrigger>
-                        <AccordionContent>
-                          <BulletedList
-                            className="mb-8"
-                            key={institution.toLowerCase()}
-                            array={coursework}
-                          />
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
+                    <AccordionItem value="item-1" className="border-none">
+                      <AccordionTrigger>Courses</AccordionTrigger>
+                      <AccordionContent>
+                        <BulletedList
+                          className="mb-8"
+                          key={institution.toLowerCase()}
+                          array={coursework}
+                        />
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </Details>
               </Fragment>
             );

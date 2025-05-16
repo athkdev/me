@@ -44,13 +44,13 @@ const Nav = ({
         />
       </div>
       <Divider className="flex md:hidden" orientation="horizontal" />
-      <div className="flex md:grid grid-cols-2 gap-2 p-4 text-stone-400">
+      <div className="flex md:grid grid-cols-2 gap-2 p-4 text-stone-400 bg-white">
         <Center className="mx-auto">
           <div>
-            <h1 className="text-2xl md:text-4xl hover:-translate-y-1 transition ease-in-out">
+            <h1 className="text-2xl md:text-lg hover:-translate-y-1 transition ease-in-out">
               I am{" "}
               <span
-                className={`name underline underline-offset-2 text-stone-200 hover:bg-amber-400 cursor-pointer font-extrabold text-gray-200 hover:text-white`}
+                className={`name underline underline-offset-2 text-stone-200 hover:bg-amber-400 cursor-pointer text-neutral-800 hover:text-white`}
               >
                 Atharva.
               </span>{" "}
@@ -59,7 +59,7 @@ const Nav = ({
           </div>
         </Center>
         <div className="hidden md:flex font-text">
-          <div className="flex mx-auto gap-2 my-auto">
+          <div className="flex mx-auto gap-2 my-auto text-sm">
             <Link
               href="/resume"
               isExternal
@@ -139,7 +139,7 @@ const Nav = ({
 
                   <Link
                     href="/contact"
-                    // onClick={() => setResumeModalOpen(() => true)}
+                  // onClick={() => setResumeModalOpen(() => true)}
                   >
                     <Button
                       leftIcon={<EnvelopeClosedIcon />}

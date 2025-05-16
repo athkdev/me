@@ -14,8 +14,8 @@
 }
 
 *::selection {
-    background-color: #fff !important;
-    color: #161616 !important;
+    color: #fff !important;
+    background-color: #161616 !important;
 }
 
 @layer base {

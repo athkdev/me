@@ -17,7 +17,7 @@ export default function BulletedList({
         return (
           <span
             key={i}
-            className="text-xs odd:text-stone-300 even:text-stone-500"
+            className="text-xs odd:text-neutral-400 even:text-stone-600"
           >
             {element} {i < array.length - 1 ? " • " : null}
           </span>

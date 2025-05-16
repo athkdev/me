@@ -37,7 +37,7 @@ const jobs: Job[] = [
     title: "Graduate Teaching Assistant",
     start: "August 2022",
     end: "May 2023",
-    current: true,
+    current: false,
     description:
       "Currently working as a Graduate Teaching Assistant for CSYE 7270 (Building Virtual Environments) at College of Engineering, Northeastern University.",
     techStack: [
