@@ -88,7 +88,7 @@ export default function Education({ className }: EducationProps): ReactElement {
                   </p>
                   <Accordion type="single" collapsible className="text-neutral-400">
                     <AccordionItem value="item-1" className="border-none">
-                      <AccordionTrigger>Courses</AccordionTrigger>
+                      <AccordionTrigger className="text-xs">Courses</AccordionTrigger>
                       <AccordionContent>
                         <BulletedList
                           className="mb-8"

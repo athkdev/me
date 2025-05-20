@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 export const primaryFont = localFont({
   src: [
     {
-      path: "../../public/fonts/OverusedGrotesk-VF.woff",
+      path: "../../public/fonts/HelveticaNeue.woff2",
       //   weight: "400",
       style: "normal",
     },

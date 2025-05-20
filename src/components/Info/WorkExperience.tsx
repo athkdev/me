@@ -34,9 +34,9 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    title: "Graduate Teaching Assistant",
-    start: "August 2022",
-    end: "May 2023",
+    title: "Graduate TA",
+    start: "Sept 2024",
+    end: "May 2025",
     current: false,
     description:
       "Currently working as a Graduate Teaching Assistant for CSYE 7270 (Building Virtual Environments) at College of Engineering, Northeastern University.",
@@ -142,7 +142,6 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
                     </Link>
                   </span>
                   <Description>
-                    {/* <p className="text-neutral-400 mt-2">{description}</p> */}
                     <Technologies title={title} techStack={techStack} />
                     <Responsibilites
                       title={title}
@@ -169,7 +168,7 @@ function Technologies({ title, techStack, className }: TechnologiesProps) {
   return (
     <Accordion type="single" collapsible className="text-neutral-400">
       <AccordionItem value="item-1" className="border-none">
-        <AccordionTrigger>Technologies I worked with</AccordionTrigger>
+        <AccordionTrigger className="text-xs">Technologies I worked with</AccordionTrigger>
         <AccordionContent>
           <BulletedList
             className="mt-2"
@@ -196,7 +195,7 @@ function Responsibilites({
   return (
     <Accordion type="single" collapsible className="text-neutral-400">
       <AccordionItem value="item-1" className="border-none">
-        <AccordionTrigger>Responsibilities</AccordionTrigger>
+        <AccordionTrigger className="text-xs">Responsibilities</AccordionTrigger>
         <AccordionContent>
           <BulletedList
             className="mt-2"
