@@ -5,11 +5,8 @@ export default function About() {
     <section className={``}>
       <SectionHeader>about</SectionHeader>
       <p className="text-neutral-400 ">
-        I&apos;m Atharva. I am a software engineer based out of Boston, MA. I
-        specialize in fullstack engineering, application development and cloud
-        infrastructure. I am an AI enthusiast with a focus on Gen AI and
-        transformer architecture with PyTorch and absolutely love prompt
-        engineering!
+        I&apos;m Atharva. I am a <span className="text-black">software engineer</span> based out of Boston, MA. I
+        specialize in fullstack engineering, product development and cloud infrastructure.
       </p>
       <p className="text-neutral-400 mt-4">
         I enjoy building dynamic, creative products from start to finish.

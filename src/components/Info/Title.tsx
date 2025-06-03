@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 interface TitleProps {
-  name: string;
+  name: string | ReactElement;
   className?: string;
 }
 

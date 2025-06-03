@@ -11,7 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import { Link } from "@chakra-ui/react";
+import Link from "next/link";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import localFont from "next/font/local";
 import SectionHeader from "./SectionHeader";
@@ -34,9 +34,9 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    title: "Graduate TA",
-    start: "Sept '24",
-    end: "May '25",
+    title: "graduate ta",
+    start: "sept '24",
+    end: "may '25",
     current: false,
     description:
       "Currently working as a Graduate Teaching Assistant for CSYE 7270 (Building Virtual Environments) at College of Engineering, Northeastern University.",
@@ -48,7 +48,7 @@ const jobs: Job[] = [
       "n8n",
       "OpenAI",
     ],
-    company: "Northeastern University",
+    company: "northeastern university",
     companyLink: "https://www.northeastern.edu/",
     responsibilities: [
       "Conduct code reviews and grade student submissions for C++, C#, WebGL, Linux and graphics video projects, ensuring code quality and alignment with course objectives",
@@ -58,9 +58,9 @@ const jobs: Job[] = [
     ],
   },
   {
-    title: "Software Engineer 1",
-    start: "Aug '22",
-    end: "May '23",
+    title: "software engineer 1",
+    start: "aug '22",
+    end: "may '23",
     current: false,
     description:
       "Worked extensively with Java Spring and ReactJS along with AWS and PostgreSQL to build impactful full stack web products!",
@@ -72,7 +72,7 @@ const jobs: Job[] = [
       "ElasticSearch",
       "PostgreSQL",
     ],
-    company: "Cognizant Technology Solutions",
+    company: "cognizant",
     companyLink: "https://www.cognizant.com/in/en",
     responsibilities: [
       "Built and maintained an in-house React component library with 28+ reusable and themeable UI elements",
@@ -84,14 +84,14 @@ const jobs: Job[] = [
     ],
   },
   {
-    title: "Junior Software Engineer",
-    start: "Apr '21",
-    end: "Feb '22",
+    title: "junior software engineer",
+    start: "apr '21",
+    end: "feb '22",
     current: false,
     description:
       "Built e-commerce products for Shopify, loyalty rewards apps for local businesses in Dublin, Ireland.",
     techStack: ["NextJS", "ReactJS", "Express", "GraphQL", "TS", "Redis"],
-    company: "RaftLabs Co.",
+    company: "raftlabs",
     companyLink: "https://www.raftlabs.co",
     responsibilities: [
       "Built and maintained an in-house React component library with 28+ reusable and themeable UI elements",
@@ -135,10 +135,7 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
                 />
                 <Details>
                   <span>
-                    <Title name={title} />
-                    <Link className="text-xs" href={companyLink} isExternal>
-                      {company} <ExternalLinkIcon mx="2px" />
-                    </Link>
+                    <Title name={<span>{title}<span className="text-neutral-400"> @ <Link href={companyLink} className="underline underline-offset-4" target="_blank">{company}</Link></span></span>} />
                   </span>
                   <Description>
                     <Technologies title={title} techStack={techStack} />

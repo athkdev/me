@@ -30,11 +30,11 @@ interface Education {
 
 const education: Education[] = [
   {
-    institution: "Northeastern University, Boston",
-    start: "Sept '23",
-    end: "May '25",
+    institution: "northeastern university, boston",
+    start: "sept '23",
+    end: "may '25",
     current: false,
-    degree: "Master of Science, CS + Information Systems (full stack web, and cloud infrastructure)",
+    degree: "master of science, cs + information systems (full stack web, and cloud infrastructure)",
     gpa: "3.9",
     coursework: [
       "Algorithms",
@@ -48,12 +48,12 @@ const education: Education[] = [
     ],
   },
   {
-    institution: "University of Mumbai, Mumbai",
-    start: "Aug '18",
-    end: "May '22",
+    institution: "university of mumbai, mumbai",
+    start: "aug '18",
+    end: "may '22",
     current: false,
     degree:
-      "Bachelor of Engineering, Electrical and Communications Engineering",
+      "bachelor of engineering, electrical and communications engineering",
     gpa: "3.6",
     coursework: [
       "Programming in C",
