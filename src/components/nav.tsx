@@ -78,7 +78,7 @@ const Nav = ({
               <Divider orientation="vertical" />
             </Center>
             <Link
-              href="https://github.com/AtharvaKamble"
+              href="https://github.com/athkdev"
               isExternal
               className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
@@ -139,7 +139,7 @@ const Nav = ({
 
                   <Link
                     href="/contact"
-                  // onClick={() => setResumeModalOpen(() => true)}
+                    // onClick={() => setResumeModalOpen(() => true)}
                   >
                     <Button
                       leftIcon={<EnvelopeClosedIcon />}
@@ -160,7 +160,7 @@ const Nav = ({
                     variant="solid"
                     className="w-full"
                   >
-                    <Link href="https://github.com/AtharvaKamble" isExternal>
+                    <Link href="https://github.com/athkdev" isExternal>
                       github
                     </Link>
                   </Button>
