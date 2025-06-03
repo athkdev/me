@@ -105,13 +105,13 @@ export default function Projects({ className }: ProjectProps): ReactElement {
 
   return (
     <section className={`min-h-screen min-w-full ${className}`}>
-      <SectionHeader>some projects i&apos;ve built</SectionHeader>
+      <SectionHeader className="mb-10">some projects i&apos;ve built</SectionHeader>
 
-      <StackingCards totalCards={projects.length} scaleMultiplier={0.07}>
+      <StackingCards totalCards={projects.length} scaleMultiplier={0.07} >
         {projects?.map(
           ({ title, sourceUrl, desc, imgUrl, hostedUrl, blogUrl }, i) => {
             return (
-              <StackingCardItem index={i} key={title.toLowerCase()}>
+              <StackingCardItem index={i} key={title.toLowerCase()} className="mb-20">
                 <LazyProjectCard
                   key={title.toLowerCase()}
                   title={title}

@@ -31,8 +31,8 @@ interface Education {
 const education: Education[] = [
   {
     institution: "Northeastern University, Boston",
-    start: "Sept 2023",
-    end: "May 2025",
+    start: "Sept '23",
+    end: "May '25",
     current: false,
     degree: "Master of Science, CS + Information Systems (full stack web, and cloud infrastructure)",
     gpa: "3.9",
@@ -49,8 +49,8 @@ const education: Education[] = [
   },
   {
     institution: "University of Mumbai, Mumbai",
-    start: "Aug 2018",
-    end: "May 2022",
+    start: "Aug '18",
+    end: "May '22",
     current: false,
     degree:
       "Bachelor of Engineering, Electrical and Communications Engineering",

@@ -33,10 +33,10 @@ export default function ProjectCard({
     <HoverCard>
       <div
         key={key}
-        className={`p-3 relative flex flex-col justify-between cursor-pointer rounded border-stone-800 bg-neutral-800  text-white font-semibold transition ${className}`}
+        className={`p-3 relative flex flex-col justify-between cursor-pointer rounded border border-dashed border-stone-800 text-black font-semibold transition backdrop-blur-sm bg-white/30 ${className}`}
       >
         <HoverCardTrigger>
-          <span className="text-base text-gray-300">{title}</span>
+          <span className="text-base text-black">{title}</span>
           {/* <span className="text-sm font-thin no-underline">{desc}</span> */}
           <img src={imgUrl} className="rounded mt-2" />
         </HoverCardTrigger>

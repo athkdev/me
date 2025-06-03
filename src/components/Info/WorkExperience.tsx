@@ -35,8 +35,8 @@ interface Job {
 const jobs: Job[] = [
   {
     title: "Graduate TA",
-    start: "Sept 2024",
-    end: "May 2025",
+    start: "Sept '24",
+    end: "May '25",
     current: false,
     description:
       "Currently working as a Graduate Teaching Assistant for CSYE 7270 (Building Virtual Environments) at College of Engineering, Northeastern University.",
@@ -45,9 +45,8 @@ const jobs: Job[] = [
       "C#",
       "Typescript",
       "React",
-      "Voiceflow AI",
       "n8n",
-      "LLMs",
+      "OpenAI",
     ],
     company: "Northeastern University",
     companyLink: "https://www.northeastern.edu/",
@@ -60,8 +59,8 @@ const jobs: Job[] = [
   },
   {
     title: "Software Engineer 1",
-    start: "August 2022",
-    end: "May 2023",
+    start: "Aug '22",
+    end: "May '23",
     current: false,
     description:
       "Worked extensively with Java Spring and ReactJS along with AWS and PostgreSQL to build impactful full stack web products!",
@@ -86,8 +85,8 @@ const jobs: Job[] = [
   },
   {
     title: "Junior Software Engineer",
-    start: "April 2021",
-    end: "Feb 2022",
+    start: "Apr '21",
+    end: "Feb '22",
     current: false,
     description:
       "Built e-commerce products for Shopify, loyalty rewards apps for local businesses in Dublin, Ireland.",

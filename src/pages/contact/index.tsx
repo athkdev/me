@@ -51,7 +51,7 @@ function BusinessCard(): JSX.Element {
   };
 
   return (
-    <div className="flex gap-8 p-6 bg-neutral-100 rounded-lg shadow-sm">
+    <div className="flex gap-8 p-6 bg-neutral-100 rounded-lg shadow-sm border border-dashed border-neutral-400">
       <div className="flex flex-col gap-3">
         {Object.keys(linkParts).map((link) => (
           <button
