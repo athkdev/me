@@ -61,7 +61,7 @@ const Nav = ({
         <div className="hidden md:flex font-text">
           <div className="flex mx-auto gap-2 my-auto text-sm">
             <Link
-              href="/resume"
+              href="/cv"
               isExternal
               className="hover:-translate-y-0.5 transition ease-in-out my-auto"
             >
@@ -121,7 +121,7 @@ const Nav = ({
               <Center className="bg-white">
                 <Stack direction={"column"} className="bg-white">
                   <Link
-                    href="/resume"
+                    href="/cv"
                     isExternal
                     className="hover:-translate-y-0.5 transition ease-in-out my-auto"
                   >
