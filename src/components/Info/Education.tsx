@@ -11,8 +11,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-
+} from "@/components/ui/accordion";
+import Link from "next/link";
 
 interface EducationProps {
   className: string;
@@ -26,16 +26,19 @@ interface Education {
   degree: string;
   gpa: string;
   coursework: string[];
+  city: string;
 }
 
 const education: Education[] = [
   {
-    institution: "northeastern university, boston",
+    institution: "northeastern university",
     start: "sept '23",
     end: "may '25",
     current: false,
-    degree: "master of science, cs + information systems (full stack web, and cloud infrastructure)",
+    degree:
+      "master of science, cs + information systems (full stack web, and cloud infrastructure)",
     gpa: "3.9",
+    city: "boston",
     coursework: [
       "Algorithms",
       "Web development",
@@ -48,13 +51,14 @@ const education: Education[] = [
     ],
   },
   {
-    institution: "university of mumbai, mumbai",
+    institution: "university of mumbai",
     start: "aug '18",
     end: "may '22",
     current: false,
     degree:
       "bachelor of engineering, electrical and communications engineering",
     gpa: "3.6",
+    city: "mumbai",
     coursework: [
       "Programming in C",
       "Objected Oriented Design",
@@ -72,7 +76,10 @@ export default function Education({ className }: EducationProps): ReactElement {
       <SectionHeader>education</SectionHeader>
       <div className="grid grid-row-2 sm:grid-cols-6 my-4">
         {education?.map(
-          ({ institution, start, end, current, degree, coursework, gpa }, i) => {
+          (
+            { institution, start, end, current, degree, coursework, gpa, city },
+            i
+          ) => {
             return (
               <Fragment key={i}>
                 <DateRange
@@ -82,13 +89,28 @@ export default function Education({ className }: EducationProps): ReactElement {
                   className="mb-1"
                 />
                 <Details>
-                  <Title name={institution} />
+                  <span>
+                    <Title
+                      name={
+                        <span>
+                          {institution}
+                          <span className="text-neutral-400">, {city}</span>
+                        </span>
+                      }
+                    />
+                  </span>
                   <p className="text-neutral-400 my-1 text-xs">
                     {degree}, {gpa}
                   </p>
-                  <Accordion type="single" collapsible className="text-neutral-400">
+                  <Accordion
+                    type="single"
+                    collapsible
+                    className="text-neutral-400"
+                  >
                     <AccordionItem value="item-1" className="border-none">
-                      <AccordionTrigger className="text-xs">Courses</AccordionTrigger>
+                      <AccordionTrigger className="text-xs">
+                        Courses
+                      </AccordionTrigger>
                       <AccordionContent>
                         <BulletedList
                           className="mb-8"

@@ -40,14 +40,7 @@ const jobs: Job[] = [
     current: false,
     description:
       "Currently working as a Graduate Teaching Assistant for CSYE 7270 (Building Virtual Environments) at College of Engineering, Northeastern University.",
-    techStack: [
-      "C++",
-      "C#",
-      "Typescript",
-      "React",
-      "n8n",
-      "OpenAI",
-    ],
+    techStack: ["C++", "C#", "Typescript", "React", "n8n", "OpenAI"],
     company: "northeastern university",
     companyLink: "https://www.northeastern.edu/",
     responsibilities: [
@@ -135,7 +128,24 @@ export default function WorkExperience({ className }: WorkExperienceProps) {
                 />
                 <Details>
                   <span>
-                    <Title name={<span>{title}<span className="text-neutral-400"> @ <Link href={companyLink} className="underline underline-offset-4" target="_blank">{company}</Link></span></span>} />
+                    <Title
+                      name={
+                        <span>
+                          {title}
+                          <span className="text-neutral-400">
+                            {" "}
+                            @{" "}
+                            <Link
+                              href={companyLink}
+                              className="underline underline-offset-4"
+                              target="_blank"
+                            >
+                              {company}
+                            </Link>
+                          </span>
+                        </span>
+                      }
+                    />
                   </span>
                   <Description>
                     <Technologies title={title} techStack={techStack} />
@@ -164,7 +174,9 @@ function Technologies({ title, techStack, className }: TechnologiesProps) {
   return (
     <Accordion type="single" collapsible className="text-neutral-400">
       <AccordionItem value="item-1" className="border-none">
-        <AccordionTrigger className="text-xs">Technologies I worked with</AccordionTrigger>
+        <AccordionTrigger className="text-xs">
+          Technologies I worked with
+        </AccordionTrigger>
         <AccordionContent>
           <BulletedList
             className="mt-2"
@@ -191,7 +203,9 @@ function Responsibilites({
   return (
     <Accordion type="single" collapsible className="text-neutral-400">
       <AccordionItem value="item-1" className="border-none">
-        <AccordionTrigger className="text-xs">Responsibilities</AccordionTrigger>
+        <AccordionTrigger className="text-xs">
+          Responsibilities
+        </AccordionTrigger>
         <AccordionContent>
           <BulletedList
             className="mt-2"
